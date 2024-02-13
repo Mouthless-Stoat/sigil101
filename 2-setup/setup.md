@@ -12,7 +12,7 @@ First we will get the game engine Godot which IMF uses. The specific Godot versi
 
 ## Getting the Code
 
-The game is open source on GitHub and you can get the code [here](https://github.com/107zxz/inscr-onln). After going to that page click on `Code` then `Download ZIP` and you now have the game code. 
+The game is open source on GitHub and you can get the code [here](https://github.com/107zxz/inscr-onln). After going to that page click on `Code` then `Download ZIP` and you now have the game code.
 
 ![image](https://github.com/Mouthless-Stoat/sigil101/assets/89868169/52c58fb1-a5f0-4699-885d-cd01c927d93e)
 
@@ -54,7 +54,7 @@ If you don't want to download Godot and the game code you can also make a `scrip
 
 ## Tools
 
-Here are some tool that you may want to have to help you decode the game. These tools mostly run in the command line (`cmd`, `powershell` or whatever your terminal is) and they help with finding text and file.
+Here are some tools that you may want to have to help you decode the game. These tools mostly run in the command line (`cmd`, `powershell` or whatever your terminal is) and they help with finding text and file.
 
 First of these tool is [`ripgrep`](https://github.com/BurntSushi/ripgrep), it lets you look for text incredibility fast this help with finding function or simply looking for a specific piece of logic you are missing. Everything on how to install and use the tool is available on the tool GitHub page take a look at it or ask other.
 
