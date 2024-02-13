@@ -1,5 +1,13 @@
 # Chapter 2: Setting up
 
+-   [Introduction](#introduction)
+-   [Getting the Engine](#getting-the-engine)
+-   [Getting the Code](#getting-the-code)
+-   [Navigating](#navigating)
+-   [Alternative](#alternative)
+-   [Tools](#tools)
+-   [Conclusion](#conclusion)
+
 ## Introduction
 
 This chapter will help you set up your environment to start making sigil. We will be going over how to get the game code and how to navigate the Godot UI, we will also be going over alternative method to make sigils without downloading the game code.
