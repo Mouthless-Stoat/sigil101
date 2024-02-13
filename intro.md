@@ -1,12 +1,25 @@
 # Chapter 1: Hello... Programming?
 
-# Introduction
+-   [Introduction](#introduction)
+-   [Formatting](#formatting)
+-   [Expression vs Statement](#expression-vs-statement)
+-   [Variables](#variables)
+-   [Operator](#operator)
+-   [Array](#array)
+-   [Function Call](#function-call)
+-   [Control flow](#control-flow)
+-   [Loop](#loop)
+-   [Defining function](#defining-function)
+-   [Method](#method)
+-   [Conclusion](#conclusion)
+
+## Introduction
 
 This chapter cover the basic of programming and what you need to make a sigil. Well will go through variable, control flow, loop, function, and everything else you would likely take in a beginner level programming course. We will mainly be talking about these concept in the context of `gdscript` (the sigil programming language) and so all example will be given in `gdscript`.
 
 You should also obtain the game source code which can be download [here](https://github.com/107zxz/inscr-onln) using the `Code` button click on `Download ZIP`. You also would need the Godot engine, the specific version that the game was built on is [Godot 3.5.3](https://godotengine.org/download/3.x/windows/), download that version when messing with the game code. Also note that you should not edit the game source code to make sure that your sigil will work with any version of the game
 
-# Formatting
+## Formatting
 
 Before getting into any actual programming, there a few things you need to keep in mind while programming in `gdscript` most formatting is very sensitive and may make or break your program.
 
@@ -14,11 +27,11 @@ First is indentation, indentation are very important the basic is choose a inden
 
 Second is casing, casing in programming matter `int` and `Int` are very different thing and you should make sure that you casing is correct when debugging code.
 
-# Expression vs Statement
+## Expression vs Statement
 
 This is a very simple distinction, expression return a value while statement does not. Expression can be use with each other while statement cannot. Unless this guide stated otherwise a syntax construct is an expression. A good rule is if it start with a keyword like `if`, `else`, `while` then it is a statement
 
-# Variables
+## Variables
 
 Variables are very simple they are like boxes that store a value so you can reuse them. Variables can have a name like label that we can put on our box. Each variable can also have a type following the box analogy, different data type are like different objects or toys we can put in our box. This is how you would declare a variable
 
@@ -58,7 +71,7 @@ var number = 10 # make a new variable containing 10
 number = 5 # change the content to 5
 ```
 
-# Operator
+## Operator
 
 Operators are well operation that you can do between value. `gdscript` have a few operator here are the basic arithmetic one
 
@@ -98,7 +111,7 @@ a or b # a || b
 not a # !a
 ```
 
-# Array
+## Array
 
 Array are composite data type meaning they can contain multiple other data type. Array are constructed like so:
 
@@ -112,7 +125,7 @@ Using bracket (this guide use parenthesis, bracket and brace to mean `()`, `[]` 
 var arr = ["One", 2, 3, "Four", true]
 print(arr[0]) # "One"
 print(arr[1]) # 2
-# negative indexes count backward from the end
+## negative indexes count backward from the end
 print(arr[-1]) # true
 ```
 
@@ -132,7 +145,7 @@ var arr2 = [3, 4]
 print(arr1 + arr2) # [1, 2, 3, 4]
 ```
 
-# Function Call
+## Function Call
 
 Function are a piece of code that can be reuse multiple time kind of like variable be for pieces of code instead. We will learn how to define and make our own function later but now we will use the build in one. Here how functional call look like:
 
@@ -142,7 +155,7 @@ print("Hello World")
 
 There are a few thing here first is `print` which is the function name, in this case this function will print to the console. Next there is the parenthesis this signify a function call this is how `gdscript` tell variable and function apart. Lastly is what inside the parenthesis they are call arguments to the function in this case the argument is the string `"Hello World"`, function can take any amount of argument and you would separate between arguments using `,` like so `func(args1, args2, arg3)`. In summary, this line of code call the `print` function with one arguments with the value of `"Hello World"`
 
-# Control flow
+## Control flow
 
 Finally something interesting, control flow are used to change the flow of your program by introducing new branch or section of code that are only run when a condition is meet. The main way to do control flow is using `if` statement. Here is how a `if` statement look:
 
@@ -191,7 +204,7 @@ else:
 	print("odd")
 ```
 
-# Loop
+## Loop
 
 One important concept is looping, loop let you run a piece of code multiple time. There are 2 main types of loops `while` and `for`. `while` loop will continue to execute **while** a condition is `true`. Here a quick example:
 
@@ -230,7 +243,7 @@ This code will print `"break out"` then exit out of the `while` loop. Note that 
 
 Use `for` loop if you know how many cycle you need to run and `while` when you don't.
 
-# Defining function
+## Defining function
 
 Finally the final concept defining function, making your own function is quite simple here how you would do it:
 
@@ -242,7 +255,7 @@ func sum(a, b):
 
 Here we define a new function like when defining variable we use the `func` keyword to define a function next we give it a name in this case `sum`, then we need to include the parentheses and put any parameter (parameter is the name of value we give to function while argument are the actual value) we may want in this case we want 2 parameter `a` and `b`. After all of that we can define our function body in this case we calculate the sum then use a new keyword `return` to return the value. Each function can have a return and that is what we will receive if we call the function.
 
-# Method
+## Method
 
 Methods are like functions, but they only exist on certain type. You can call a method using the following syntax:
 
@@ -258,6 +271,6 @@ x.body
 
 While it may look like a method call it is not it is a properties access we will cover this we when we encounter it next chapter.
 
-# Conclusion
+## Conclusion
 
 This is will be most thing you need to make sigil, more complex topic will come up and get introduce later as you go feel free to look at the [Godot Documentation](https://docs.godotengine.org/en/3.5/) or look up online and ask other if you have any question. Next, we will be making a simple sigil that is basically a rabbit hole clone.
