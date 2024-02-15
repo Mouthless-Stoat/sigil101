@@ -29,9 +29,17 @@ func handle_event(event: String, params: Array):
 	pass
 ```
 
-Let break down what this code is doing the first line `extends SigilEffect` this will tell Godot that this is a sigil effect file. Next, if you remember from Chapter 1 we are defining a new function name `handle_event` with 2 parameters `event` and `params`. `String` and `Array` are what we call type declaration, this tell Godot that `event` is supposed to be a type `String` and `params` is of type `Array`. This is unimportant for now but it help to make our code more clear about what variable supposed to be what. Next in the body of the function we have `pass`, `pass` is basically a empty body but `gdscript` doesn't like an empty function we put in `pass` as a placeholder for now.
+Let break down what this code is doing the first line `extends SigilEffect` this will tell Godot that this is a sigil effect file. Next, if you remember from Chapter 1 we are defining a new function name `handle_event` with 2 parameters `event` and `params`.
 
-When a sigil activates the game call our `handle_event` function with the event name and some other parameter that we may want. `event` will be the event name that the sigil activate for and `params` will be the extra parameter that we may want. First let check if our sigil activate because the card was summon, put this as your function body:
+`String` and `Array` are what we call type declaration, this tell Godot that `event` is supposed to be a type `String` and `params` is of type `Array`. This is unimportant for now but it help to make our code more clear about what variable supposed to be what.
+
+```gdscript
+func handle_event(event: String, params: Array):
+```
+
+Next in the body of the function we have `pass`, `pass` is basically a empty body but `gdscript` doesn't like an empty function we put in `pass` as a placeholder for now.
+
+When a sigil activates the game call our `handle_event` function with the event name and some other parameter that we may want. `event` will be the event name that the sigil activate for and `params` will be the extra parameter. First we need check if our sigil activate because the card was summoned, put this as your function body:
 
 ```gdscript
 extends SigilEffect
@@ -128,7 +136,11 @@ Insert a new line after line `231` and add something like this.
 ...
 ```
 
-This need to be done every time you add a new sigil so the game can know to load the sigil. When you are done with this you can then launch the game using the `Play` button on the top right or using `f5`. When in the game switch to your ruleset (should be name `TEST`), make a new deck with your card in it and you can use the test feature of the deck editor, take note which window is there before the game open another window or full screen the game then use the test feature this make sure the console work correctly, for the purpose of the guide the main window (the one **you** open) will be call the **local window** and the second window (the one **the game** open) will be call the **remote window**. After playing the card in the local window you should see it in the console that say `Ant Hill Activated`. Congratulation you have coded a simple sigil we will add functionality to it in the next section.
+This need to be done every time you add a new sigil so the game can know to load the sigil. When you are done with this you can then launch the game using the `Play` button on the top right or using `f5`.
+
+When in the game switch to your ruleset (should be name `TEST`), make a new deck with your card in it and you can use the test feature of the deck editor, take note which window is there before the game open another window or full screen the game then use the test feature this make sure the console work correctly, for the purpose of the guide the main window (the one **you** open) will be call the **local window** and the second window (the one **the game** open) will be call the **remote window**.
+
+After playing the card in the local window you should see it in the console that say `Ant Hill Activated`. Congratulation you have coded a simple sigil we will add functionality to it in the next section.
 
 ## Testing Sigil (alternate)
 
@@ -185,4 +197,8 @@ After creating your sigil file make a new ruleset containing the following:
 }
 ```
 
-What to take not is the last 2 field `sigil_urls` and `custom_sigils`. `sigil_url` let you download a portrait for the sigil but if it doesn't work you can download it here and putting it in the `custom_sigil_icon` folder in the game directory. `custom_sigils` is where you define custom sigil and tell the game to load them when creating card. Now launch the game select your ruleset and start a test fight take note of which window the game opened and which one you start out with, the main window (the one **you** open) will be call the local window, the second window (the one **the game** open) will be call the remote window. After playing your card on the local window surrender quit and close the game, now go to the game file and look in the `logs` folder and open the newest log (should be `godot.log`) look at the very bottom and hopefully you can see the `Ant Hill Activated` message. You will have to redo this process every time you log or print something by closing the game go to `logs` and check the file. This is the downside of using this method of making sigils.
+What to take not is the last 2 field `sigil_urls` and `custom_sigils`. `sigil_url` let you download a portrait for the sigil but if it doesn't work you can download it here and putting it in the `custom_sigil_icon` folder in the game directory. `custom_sigils` is where you define custom sigil and tell the game to load them when creating card.
+
+Now launch the game select your ruleset and start a test fight take note of which window the game opened and which one you start out with, the main window (the one **you** open) will be call the local window, the second window (the one **the game** open) will be call the remote window.
+
+After playing your card on the local window surrender quit and close the game, now go to the game file and look in the `logs` folder and open the newest log (should be `godot.log`) look at the very bottom and hopefully you can see the `Ant Hill Activated` message. You will have to redo this process every time you log or print something by closing the game go to `logs` and check the file. This is the downside of using this method of making sigils.
