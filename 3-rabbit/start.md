@@ -6,7 +6,7 @@ In this chapter we will be making a simple customs sigil that is basically a `Ra
 
 This section Chapter 3.1 however will only touch one how to get your sigil loaded and have a test card ready, in the next section Chapter 3.2 is where well will make our sigil code.
 
-> [!NODE]
+> [!NOTE]
 > "Game directory" and "Game File" mean the same thing they are whatever folder appear when you press the `Open Game Directory` on the main screen.
 > "Game Code" refer to the actual game code that you open using the Godot Engine.
 
