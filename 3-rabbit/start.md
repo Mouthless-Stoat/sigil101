@@ -1,0 +1,188 @@
+# Chapter 3: The first of many
+
+## Introduction
+
+In this chapter we will be making a simple customs sigil that is basically a `Rabbit Hole` clone but they spawn ant instead. From this custom sigil we'll with customize it to be more complex allowing the user to customize it without changing the code.
+
+This section Chapter 3.1 however will only touch one how to get your sigil loaded and have a test card ready, in the next section Chapter 3.2 is where well will make our sigil code.
+
+> [!NODE]
+> "Game directory" and "Game File" mean the same thing they are whatever folder appear when you press the `Open Game Directory` on the main screen.
+> "Game Code" refer to the actual game code that you open using the Godot Engine.
+
+## Ceremony
+
+> [!NOTE]
+> Ceremony mean code that you always must write before implementing anything or your solution to a problem.
+
+Let make an empty sigil file to start coding our sigil in. First go to your `File System` find the `scripts` folder open it then open the `classes` folder and lastly open the `sigils` folder. Now right click on the `sigils` folder and choose new script. Now name the file `Ant Hill` and click create.
+
+> [!NOTE]
+> If you are using the alternate method of making sigils make a new file in your `scripts` in the game directory name `Ant Hill.gd` (the ending `.gd` is important)
+
+After creating the file find the file in your `File System` double click to open it, now you should be in the script tab with the script open in front of you. You can delete everything in the file and type the following:
+
+```gdscript
+extends SigilEffect
+
+func handle_event(event: String, params: Array):
+	pass
+```
+
+Let break down what this code is doing the first line `extends SigilEffect` this will tell Godot that this is a sigil effect file. Next, if you remember from Chapter 1 we are defining a new function name `handle_event` with 2 parameters `event` and `params`. `String` and `Array` are what we call type declaration, this tell Godot that `event` is supposed to be a type `String` and `params` is of type `Array`. This is unimportant for now but it help to make our code more clear about what variable supposed to be what. Next in the body of the function we have `pass`, `pass` is basically a empty body but `gdscript` doesn't like an empty function we put in `pass` as a placeholder for now.
+
+When a sigil activates the game call our `handle_event` function with the event name and some other parameter that we may want. `event` will be the event name that the sigil activate for and `params` will be the extra parameter that we may want. First let check if our sigil activate because the card was summon, put this as your function body:
+
+```gdscript
+extends SigilEffect
+
+func handle_event(event: String, params: Array):
+	if event == "card_summoned":
+		pass
+```
+
+This will see if our `event` is `card_summoned` which get call when a card get summoned. We once again use `pass` because we have not decide what we want to do yet. Let put a print statement in our body so we know that the sigil activated.
+
+```gdscript
+extends SigilEffect
+
+func handle_event(event: String, params: Array):
+	if event == "card_summoned":
+		print("Ant Hill Activated")
+```
+
+Now let test the sigil, first we need to add a new card to test our sigil, to do this we should create a new ruleset to contain our test card.
+
+## Testing sigil
+
+> [!NOTE]
+> If you are using the alternate method of making sigils skip this section
+
+This is not mean to be a comprehensive guide to making ruleset so we will only make a simple ruleset to test our sigil. To make a custom ruleset navigate to your `rulesets` folder in the game directory. In this folder create a new file call `test.json` and in the file it with the following information:
+
+```json
+{
+    "ruleset": "TEST",
+    "hammers_per_turn": 1,
+    "ant_limit": 100,
+    "deck_size_min": 1,
+    "max_commons_main": 4,
+    "max_commons_side": 10,
+    "num_candles": 3,
+    "variable_attack_nerf": false,
+    "allow_snuffing_candles": true,
+    "opt_actives": false,
+    "enable_backrow": false,
+    "starting_bones": 100000,
+    "stating_energy_max": 100000,
+    "portrait": "portraits/Stoat",
+    "description": "TEST TIME",
+    "cards": [
+        {
+            "name": "Thick",
+            "attack": 0,
+            "health": 2,
+            "sigils": ["Ant Hill"]
+        },
+        {
+            "name": "Squirrel",
+            "attack": 0,
+            "health": 1
+        }
+    ],
+    "side_decks": {
+        "10 Squirrels": {
+            "type": "single",
+            "card": "Squirrel",
+            "count": 10
+        }
+    }
+}
+```
+
+We use `Thick` as the card name here so we don't have to make the art for the card and just reuse the `Thick` card art you can use any other name that you like. Now we can load this ruleset in the game like how you would load any other rule set there is a couple other thing we need to do so the game can load ours.
+
+First go back to Godot and find the file `CardInfo.gd` and in there go to line `231`, you should see something like this:
+
+```gdscript
+...
+	"Warded": "A card bearing this sigil takes only 1 damage from attacks and card effects.",
+	"Waterborne": "A card bearing this sigil submerges itself during its opponent's turn. while submerged, opposing creatures attack its owner directly.",
+	"Worthy Sacrifice": "A card bearing this sigil is counted as 3 blood rather than 1 blood when sacrificed."
+}
+...
+```
+
+Insert a new line after line `231` and add something like this.
+
+> [!NOTE]
+> The comma at the end of line `231` is important
+
+```gdscript
+...
+	"Warded": "A card bearing this sigil takes only 1 damage from attacks and card effects.",
+	"Waterborne": "A card bearing this sigil submerges itself during its opponent's turn. while submerged, opposing creatures attack its owner directly.",
+	"Worthy Sacrifice": "A card bearing this sigil is counted as 3 blood rather than 1 blood when sacrificed.",
+	"Ant Hill": "TEST SIGIL"
+}
+...
+```
+
+This need to be done every time you add a new sigil so the game can know to load the sigil. When you are done with this you can then launch the game using the `Play` button on the top right or using `f5`. When in the game switch to your ruleset (should be name `TEST`), make a new deck with your card in it and you can use the test feature of the deck editor, take note which window is there before the game open another window or full screen the game then use the test feature this make sure the console work correctly, for the purpose of the guide the main window (the one **you** open) will be call the **local window** and the second window (the one **the game** open) will be call the **remote window**. After playing the card in the local window you should see it in the console that say `Ant Hill Activated`. Congratulation you have coded a simple sigil we will add functionality to it in the next section.
+
+## Testing Sigil (alternate)
+
+> [!NOTE]
+> This section is for the alternate method of making sigil, if you are using the game engine method skip this section.
+
+After creating your sigil file make a new ruleset containing the following:
+
+```json
+{
+    "ruleset": "TEST",
+    "hammers_per_turn": 1,
+    "ant_limit": 100,
+    "deck_size_min": 1,
+    "max_commons_main": 4,
+    "max_commons_side": 10,
+    "num_candles": 3,
+    "variable_attack_nerf": false,
+    "allow_snuffing_candles": true,
+    "opt_actives": false,
+    "enable_backrow": false,
+    "starting_bones": 100000,
+    "stating_energy_max": 100000,
+    "portrait": "portraits/Stoat",
+    "description": "TEST TIME",
+    "cards": [
+        {
+            "name": "Thick",
+            "attack": 0,
+            "health": 2,
+            "sigils": ["Ant Hill"]
+        },
+        {
+            "name": "Squirrel",
+            "attack": 0,
+            "health": 1
+        }
+    ],
+    "side_decks": {
+        "10 Squirrels": {
+            "type": "single",
+            "card": "Squirrel",
+            "count": 10
+        }
+    }
+    "sigil_urls": {
+        "Ant Hill": "LINK"
+    }
+    "custom_sigils": {
+        "Ant Hill": {
+            "description": "TEST",
+        }
+    }
+}
+```
+
+What to take not is the last 2 field `sigil_urls` and `custom_sigils`. `sigil_url` let you download a portrait for the sigil but if it doesn't work you can download it here and putting it in the `custom_sigil_icon` folder in the game directory. `custom_sigils` is where you define custom sigil and tell the game to load them when creating card. Now launch the game select your ruleset and start a test fight take note of which window the game opened and which one you start out with, the main window (the one **you** open) will be call the local window, the second window (the one **the game** open) will be call the remote window. After playing your card on the local window surrender quit and close the game, now go to the game file and look in the `logs` folder and open the newest log (should be `godot.log`) look at the very bottom and hopefully you can see the `Ant Hill Activated` message. You will have to redo this process every time you log or print something by closing the game go to `logs` and check the file. This is the downside of using this method of making sigils.

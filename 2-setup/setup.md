@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This chapter will help you set up your environment to start making sigil. We will be going over how to get the game code and how to navigate the Godot UI, we will also be going over alternative method to make sigils without downloading the game code.
+This chapter will help you set up your environment to start making sigil. We will be going over how to get the game code and how to navigate the Godot UI, we will also be going over alternative method to make sigils without downloading the game code, this method however will make testing the sigil much harder.
 
 Although not necessary, we will be talking about some tool that may help you in understanding the game code and make it a bit easier to make new sigils.
 
@@ -54,9 +54,14 @@ Lastly in the top right conner is a few more button only focus on the triangle b
 
 ![image](https://github.com/Mouthless-Stoat/sigil101/assets/89868169/132159f7-7f7d-4504-b340-16f3cfd3589a)
 
+Lastly at the bottom of your screen you will see a button call `Output` this is where your console is and how you can see the result of `print` statement.
+
 That all you need to know for now to use the engine more stuff will be introduce when they come up. We would also touch on how and where to put your custom sigil in the next chapter.
 
 ## Alternative
+
+> [!WARNING]
+> This will make looking at the game log much harder however if you are comfortable with that this method can be much faster.
 
 If you don't want to download Godot and the game code you can also make a `scripts` folder in your game directory (access using the `Open Game Directory` button in the title screen) and put your code in there. Note this guide will focus mostly on using the Godot engine because it provide a built in editor that we can use, but if you use this alternate method whenever the guide say "the sigils folder" or "the `scripts/classes/sigils` folder" it is referring to your `scripts` folder in the game directory.
 
