@@ -17,7 +17,9 @@
 
 This chapter cover the basic of programming and what you need to make a sigil. Well will go through variable, control flow, loop, function, and everything else you would likely take in a beginner level programming course. We will mainly be talking about these concept in the context of `gdscript` (the sigil programming language) and so all example will be given in `gdscript`.
 
-You should also obtain the game source code which can be download [here](https://github.com/107zxz/inscr-onln) using the `Code` button click on `Download ZIP`. You also would need the Godot engine, the specific version that the game was built on is [Godot 3.5.3](https://godotengine.org/download/3.x/windows/), download that version when messing with the game code. Also note that you should not edit the game source code to make sure that your sigil will work with any version of the game
+You should also obtain the game source code which can be download [here](https://github.com/107zxz/inscr-onln) using the `Code` button click on `Download ZIP`. You also would need the Godot engine, the specific version that the game was built on is [Godot 3.5.3](https://godotengine.org/download/3.x/windows/), download that version when messing with the game code. Also note that you should not edit the game source code to make sure that your sigil will work with any version of the game.
+
+Lastly we expect you to be well verse in the game and know some basic sigil editing to read this guide.
 
 ## Formatting
 
