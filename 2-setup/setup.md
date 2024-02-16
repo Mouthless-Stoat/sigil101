@@ -76,3 +76,5 @@ Secondly is [`fzf`](https://github.com/junegunn/fzf) while `ripgrep` let you loo
 ## Conclusion
 
 Now that we finally set up our environment we can start making sigils in the next chapter. In the next chapter, we will be making a simple `Rabbit Hole` clone as our introduction to making custom sigils.
+
+[Next](/3-rabbit/start.md)

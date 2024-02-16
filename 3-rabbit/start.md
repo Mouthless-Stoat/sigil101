@@ -223,3 +223,5 @@ Here the big window is the local window you can know by looking at which player 
 After playing your card on the remote window surrender then quit and close the games, now go to the game folder and look in the `logs` folder and open the newest log (should be `godot.log`) look at the very bottom and hopefully you can see the `Custom Activated` message. You will have to redo this process every time you log or print something by closing the game go to `logs` and check the file. This is the downside of using this method of making sigils.
 
 ![image](https://github.com/Mouthless-Stoat/sigil101/assets/89868169/1454ca42-399b-487e-abe3-c23de4c8f4c1)
+
+[Next](/3-rabbit/code.md)

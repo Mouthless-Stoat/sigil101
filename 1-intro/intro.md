@@ -278,3 +278,5 @@ While it may look like a method call it is not it is a properties access we will
 ## Conclusion
 
 This is will be most thing you need to make sigil, more complex topic will come up and get introduce later as you go feel free to look at the [Godot Documentation](https://docs.godotengine.org/en/3.5/) or look up online and ask other if you have any question. Next, we will be setting up our enviroment to start making sigils.
+
+[Next](/2-setup/setup.md)
