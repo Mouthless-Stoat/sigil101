@@ -1,5 +1,12 @@
 # Chapter 3.2: Code hit the fan
 
+-   [Drawing card](#drawing-card)
+-   [Oh no the bugs](#oh-no-the-bugs)
+-   [Stronger Squirrel](#stronger-squirrel)
+    -   [Dictionary](#dictionary)
+-   [Sharing is Caring](#sharing-is-caring)
+-   [Conclusion](#conclusion)
+
 ## Drawing card
 
 So as a `Rabbit Hole` clone we need to be able to draw card. Recall this is what our code look like:
@@ -190,4 +197,4 @@ And now give them this new ruleset. `sigil_url` is where the sigil portrait will
 
 ## Conclusion
 
-We have written our first sigil, learn how to share it and the logic behind our sigil now go and make some sigil this is basically all you need to know look at other sigil code to take code from and try to understand them.
+We have written our first sigil, learn how to share it and the logic behind our sigil now go and make some sigil this is basically all you need to know look at other sigil code to take code from and try to understand them. The rest of this guide will explain more sigil and why they are the way they are.

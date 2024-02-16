@@ -1,5 +1,10 @@
 # Chapter 3.1: The first of many
 
+-   [Introduction](#introduction)
+-   [Ceremony](#ceremony)
+-   [Testing sigil](#testing-sigil)
+-   [Testing Sigil (alternate)](#testing-sigil-alternate)
+
 ## Introduction
 
 In this sub chapter we will be making a simple customs sigil that is basically a `Rabbit Hole` clone but they spawn ant instead. From this custom sigil we'll with customize it to be more complex.
