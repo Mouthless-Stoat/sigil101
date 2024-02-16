@@ -131,7 +131,7 @@ Dictionary is another data type just like `Array` and `String`. Dictionary like 
 }
 ```
 
-Key are are any other valid data type including variable like `int`, `float`, `String`, etc. And a value is also any valid data type. To make a new key you put the key then a `:` follow by the value, each key pair is separated by a `,`. Key must be unique that is they can not be in the same dictionary twice. To access a value in a dictionary using key we can use property access.
+Key are any other valid data type including variable like `int`, `float`, `String`, etc. And a value is also any valid data type. To make a new key you put the key then a `:` follow by the value, each key pair is separated by a `,`. Key must be unique that is they can not be in the same dictionary twice. To access a value in a dictionary using key we can use property access.
 
 Property access look like method call because to some degree method call are property access. Like method call you can use dot notation which is `dict.key` to get any value back. There are alternative like `dict[key]` which also work, you would use this second method of accessing when your key is not a string like a `int`, `float`, etc.
 
