@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This chapter will help you set up your environment to start making sigil. We will be going over how to get the game code and how to navigate the Godot UI, we will also be going over alternative method to make sigils without downloading the game code, this method however will make testing the sigil much harder.
+This chapter will help you set up your environment to start making sigils. We will be going over how to get the game code and how to navigate the Godot UI, we will also be going over alternative method to make sigils without downloading the game code, this method however will make testing the sigil much harder.
 
 Although not necessary, we will be talking about some tool that may help you in understanding the game code and make it a bit easier to make new sigils.
 

@@ -15,23 +15,23 @@
 
 ## Introduction
 
-This chapter cover the basic of programming and what you need to make a sigil. Well will go through variable, control flow, loop, function, and everything else you would likely take in a beginner level programming course. We will mainly be talking about these concept in the context of `gdscript` (the sigil programming language) and so all example will be given in `gdscript`.
+This chapter cover the basic of programming and what you'll need to make a sigil. We'll go through variables, control flows, loops, functions, and everything else you would likely learn in a beginner level programming course. We will mainly be talking about these concept in the context of `gdscript` (the sigil programming language) and so all examples will be given in `gdscript`.
 
-You should also obtain the game source code which can be download [here](https://github.com/107zxz/inscr-onln) using the `Code` button click on `Download ZIP`. You also would need the Godot engine, the specific version that the game was built on is [Godot 3.5.3](https://godotengine.org/download/3.x/windows/), download that version when messing with the game code. Also note that you should not edit the game source code to make sure that your sigil will work with any version of the game.
+You should also obtain the game source code which can be download [here](https://github.com/107zxz/inscr-onln) using the `Code` button click on `Download ZIP`. You also would need the Godot engine, the specific version that the game was built on is [Godot 3.5.3](https://godotengine.org/download/3.x/windows/), download that version when messing with the game code. Also note that you should not edit the game source code to make sure that your sigil will work with any version of the game. You don't need to do this now, we will do this together in the next chapter.
 
-Lastly we expect you to be well verse in the game and know some basic sigil editing to read this guide.
+Lastly we expect you to be well verse in the game and know some basic ruleset editing to read this guide.
 
 ## Formatting
 
-Before getting into any actual programming, there a few things you need to keep in mind while programming in `gdscript` most formatting is very sensitive and may make or break your program.
+Before getting into any actual programming, there a few things you need to keep in mind while programming in `gdscript` most formatting choice are sensitive and may make or break your program.
 
-First is indentation, indentation are very important the basic is choose a indent type or amount and stick with it. `gdscript` isn't strict about whenever you should use tab or space, but the amount and consistency matter, you cannot mix between tab and space and once you choose a type you need to stick with it. If you chooses 3 spaces indenting everything must be 3 spaces indenting. We will be using 1 tab for indenting for the rest of this guide.
+First is indentations, indentations are very important, the basic is choose a indent type and stick with it. `gdscript` isn't strict about whenever you should use tab or space, but the amount and consistency matter, you cannot mix between tabs and spaces, once you choose a type you need to stick with it. If you chooses 3 spaces indenting everything must be 3 spaces indenting. We will be using 1 tab for indentation for the rest of this guide.
 
-Second is casing, casing in programming matter `int` and `Int` are very different thing and you should make sure that you casing is correct when debugging code.
+Second is casing, casing in programming matter `int` and `Int` are very different things and you should make sure that your casing is correct when debugging code.
 
 ## Expression vs Statement
 
-This is a very simple distinction, expression return a value while statement does not. Expression can be use with each other while statement cannot. Unless this guide stated otherwise a syntax construct is an expression. A good rule is if it start with a keyword like `if`, `else`, `while` then it is a statement
+This is a very simple distinction, expression return a value while statement does not. Expression can be use with each other while statement cannot. Unless this stated otherwise a syntax construct is an expression. A good rule is if it start with a keyword like `if`, `else`, `while` then it is a statement
 
 ## Variables
 
@@ -57,7 +57,7 @@ String
 -   `Array` is an array or list. List can contain any other data type group together; we will talk about array later. Ex: `[1, 2, 3]`, `[true, 3.14, 10]`.
 -   `String` is a string of characters. String contain any text that you would want to use, we will also cover this later. Ex: `"Hello World"`, `String`.
 
-Here some more example of variables creation, if you see a `#` that mean the beginning of a comment, comment are note that you can make to help other read your code, they are ignore when the program is ran.
+Here some more example of variables creation, if you see a `#` that mean the beginning of a comment and they run until the end of the line, comment are note that you can make to help other read your code, they are ignore when the program is execute.
 
 ```gdscript
 var pi = 3.14
@@ -71,6 +71,8 @@ After making a variable you can assign new value to it without using `var`
 var number = 10 # make a new variable containing 10
 
 number = 5 # change the content to 5
+
+print(number)
 ```
 
 ## Operator
@@ -121,13 +123,13 @@ Array are composite data type meaning they can contain multiple other data type.
 ["One", 2, 3, "Four", true]
 ```
 
-Using bracket (this guide use parenthesis, bracket and brace to mean `()`, `[]` and `{}` respectively) as delimiter and separate by `,`. Array can contain element of different type. You can access part of an array using an index. `gdscript` index start at `0` meaning element `0` is the first, `1` is the second, etc. To access an array you can use syntax like so:
+Using bracket (this guide use parenthesis, bracket and brace to mean `()`, `[]` and `{}`) as delimiter and separate by `,`. Array can contain element of different type. You can access part of an array using an index. `gdscript` index start at `0` meaning element `0` is the first, `1` is the second, etc. To access an array you can use syntax like so:
 
 ```gdscript
 var arr = ["One", 2, 3, "Four", true]
 print(arr[0]) # "One"
 print(arr[1]) # 2
-## negative indexes count backward from the end
+# negative indexes count backward from the end
 print(arr[-1]) # true
 ```
 
@@ -241,7 +243,7 @@ while true:
 	break
 ```
 
-This code will print `"break out"` then exit out of the `while` loop. Note that `while true` mean the loop will run forever if you don't include a `break`
+This code will print `"get out"` then exit out of the `while` loop. Note that `while true` mean the loop will run forever if you don't include a `break`
 
 Use `for` loop if you know how many cycle you need to run and `while` when you don't.
 
@@ -249,7 +251,7 @@ Use `for` loop if you know how many cycle you need to run and `while` when you d
 
 Finally the final concept defining function, making your own function is quite simple here how you would do it:
 
-```
+```gdscript
 func sum(a, b):
 	sum = a + b
 	return sum
@@ -267,7 +269,7 @@ x.size()
 
 First you put a `.` after the value you want to call the method on in this case `x` then the method name in this case `size` and like function call a pair of parentheses with any arguments inside. Another syntax you may see is this:
 
-```
+```gdscript
 x.body
 ```
 

@@ -59,7 +59,7 @@ If we recall `params[0]` mean we are indexing an array in this case we are getti
 
 Now if we test our sigil that bug of multiple drawing no longer happen. However when we play our card the opponent also draw a card which we may not want this also cause a desync and error. We can see this error when playing the card from the remote window.
 
-Solving this issue is also very easy we just once again need to make a sight adjustment to our condition like so:
+Solving this issue is also very easy we just once again need to make a slight adjustment to our condition like so:
 
 ```gdscript
 extends SigilEffect
