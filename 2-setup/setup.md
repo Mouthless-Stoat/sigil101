@@ -16,7 +16,7 @@ Although not necessary, we will be talking about some tool that may help you in 
 
 ## Getting the Engine
 
-First we will get the game engine Godot which IMF uses. The specific Godot version that IMF uses is [Godot 3.5.3](godotengine.org/download/3.x/). The installation process is quite straight forward go to the website download the file extract it and run the executable then you will have Godot Running
+First we will get the game engine Godot which IMF uses. The specific Godot version that IMF uses is [Godot 3.5.3](https://godotengine.org/download/3.x/). The installation process is quite straight forward go to the website download the file extract it and run the executable then you will have Godot Running
 
 ## Getting the Code
 

@@ -115,6 +115,9 @@ This is not mean to be a comprehensive guide to making ruleset so we will only m
 
 We use `Thick` as the card name here so we don't have to make the art for the card and just reuse the `Thick` card art you can use any other name that you like.We would also need art for the sigil you can make your own or use [this](https://raw.githubusercontent.com/Mouthless-Stoat/sigil101/main/3-rabbit/Ant%20Hill.png), after getting your art you can import it into the game. To import your sigil art into the game go to your `FileSystem` and open up the folder `gfx` then `sigils` and drag our file into this folder. Now we can load this ruleset in the game like how you would load any other ruleset but there is a couple other things we need to do so the game can load our sigil.
 
+> [!IMPORTANT]
+> This step is very important and remember to do this everytime you make a new sigil. Just keep adding in more line with your sigil name and description
+
 First go back to Godot and find the file `CardInfo.gd` and in there go to line `231`, you should see something like this:
 
 ```gdscript
