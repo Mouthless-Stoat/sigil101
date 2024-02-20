@@ -125,7 +125,7 @@ func handle_event(event: String, params: Array):
 		fightManager.draw_card(card_to_draw) # draw it
 ```
 
-First we revert back to having the `card_to_draw` variable this is to save the card data so we can modify it. The next 2 lines may look similar to method call but they are property access instead.
+First we revert back to having the `card_to_draw` variable this is to save the card data so we can modify it you. The next 2 lines may look similar to method call but they are property access instead.
 
 ### Dictionary
 
@@ -172,7 +172,27 @@ x /= 3 # x= x / 3
 
 However you cannot do `x &&= 10` or any other logical operator.
 
-We are using this augmented assignment to increase the attack by `2`, `card_to_draw.attack += 2` is like writing `card_to_draw.attack += card_to_draw.attack + 2` but that is long so we will use the shortcut to write them. The next line follow a similar logic changing the card `health` instead of `attack`. You may have notice that these field are similar to the card data that go into the ruleset card in fact they are the same value, so any field you expect to exist on a card will also exist on the card data that `CardInfo.from_name` return.
+We are using this augmented assignment to increase the attack by `2`, `card_to_draw.attack += 2` is like writing `card_to_draw.attack = card_to_draw.attack + 2` but that is long so we will use the shortcut to write them. The next line follow a similar logic changing the card `health` instead of `attack`. You may have notice that these field are similar to the card data that go into the ruleset card in fact they are the same value, so any field you expect to exist on a card will also exist on the card data that `CardInfo.from_name` return.
+
+## Oh no more bug
+
+If you use the sigil you may have notice that after playing the card all your squirrel will now be 2/3, this may not be what you want. This happen because of a programing quirk call shallow copy. Shallow copies are not really copy they simply let you borrow the value and any change you make on this data will affect everything else. Shallow copy exist to save space because rarely you need to modify these data type. Shallow copy exist on expensive data type like array or dictionary, which is what we use to store card. To fix this we need to make a deep copy, doing so is simple:
+
+```gdscript
+extends SigilEffect
+
+func handle_event(event: String, params: Array):
+	if event == "card_summoned" and params[0] == card and isFriendly:
+		var card_to_draw = CardInfo.from_name("Squirrel").duplicate() # get the card
+
+		# change stat
+		card_to_draw.attack += 2
+		card_to_draw.healt += 2
+
+		fightManager.draw_card(card_to_draw) # draw it
+```
+
+We added `.duplicate()` to make a deep copy of our card, this will stop modifing the original data when we change the card stat.
 
 ## Sharing is Caring
 
@@ -183,7 +203,7 @@ Now that we created a sigil time to share it with other. To share sigil they nee
 ...
     "sigil_urls": {
         "Custom": "https://raw.githubusercontent.com/Mouthless-Stoat/sigil101/main/3-rabbit/Ant%20Hill.png"
-    }
+    },
     "custom_sigils": {
         "Custom": {
             "description": "Sigil description here",
