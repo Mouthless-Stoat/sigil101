@@ -201,11 +201,9 @@ Now that we created a sigil time to share it with other. To share sigil they nee
 ```json
 {
 ...
-    "sigil_urls": {
-        "Custom": "https://raw.githubusercontent.com/Mouthless-Stoat/sigil101/main/3-rabbit/Ant%20Hill.png"
-    },
     "custom_sigils": {
         "Custom": {
+            "icon_url": "https://raw.githubusercontent.com/Mouthless-Stoat/sigil101/main/3-rabbit/Ant%20Hill.png"
             "description": "Sigil description here",
         }
     }
