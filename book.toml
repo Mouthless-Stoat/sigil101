@@ -1,0 +1,6 @@
+[book]
+authors = ["Mouthless Stoat"]
+language = "en"
+multilingual = false
+src = "src"
+title = "A Guide to IMF Sigil"
