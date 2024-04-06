@@ -8,7 +8,15 @@ description = "A full guide to making IMF sigil"
 
 [build]
 build-dir = ".book"
+extra-watch-dirs = ["./preprocessor/"]
 
 [output.html]
-code.hidelines.gdscript = "//"
-curly-quotes = true
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+additional-css = ["theme/css.css"]
+
+[output.html.code.hidelines]
+json= "~"
+
+[preprocessor.test]
+command = "python ./preprocessor/test.py"

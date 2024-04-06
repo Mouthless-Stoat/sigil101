@@ -15,13 +15,11 @@
     -   [The Basics](./ch02/ch02-01-the-basics.md)
     -   [Variables](./ch02/ch02-02-variables.md)
     -   [Types](./ch02/ch02-03-types.md)
-    -   [Operations](./ch02/ch02-04-operation.md)
-    -   [Expressions and Statements](./ch02/ch02-05-expressions-statments.md)
-    -   [Conditionals](./ch02/ch02-06-conditionals.md)
-    -   [Looping](./ch02/ch02-07-looping.md)
-    -   [Functions](./ch02/ch02-08-functions.md)
-    -   [Objects](./ch02/ch02-09-objects.md)
-    -   [Extra Exercises](./ch02/ch02-10-extra-exercises.md)
+    -   [Conditionals](./ch02/ch02-04-conditionals.md)
+    -   [Looping](./ch02/ch02-05-looping.md)
+    -   [Functions](./ch02/ch02-06-functions.md)
+    -   [Objects](./ch02/ch02-07-objects.md)
+    -   [Extra Exercises](./ch02/ch02-08-extra-exercises.md)
 
 -   [Hello ...Ruleset?]()
 
