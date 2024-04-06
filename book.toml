@@ -4,3 +4,11 @@ language = "en"
 multilingual = false
 src = "src"
 title = "A Guide to IMF Sigil"
+description = "A full guide to making IMF sigil"
+
+[build]
+build-dir = ".book"
+
+[output.html]
+code.hidelines.gdscript = "//"
+curly-quotes = true
