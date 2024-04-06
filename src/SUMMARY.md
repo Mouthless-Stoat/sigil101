@@ -4,24 +4,24 @@
 
 # Starting Up
 
--   [Getting Started](./ch01-getting-started.md)
+-   [Getting Started](./ch01/ch01-getting-started.md)
 
-    -   [Hello Godot](ch01-01-hello-godot.md)
-    -   [Hello Vscode](ch01-02-hello-vscode.md)
-    -   [Other Tools](ch01-03-other-tools.md)
+    -   [Hello Godot](ch01/ch01-01-hello-godot.md)
+    -   [Hello Vscode](ch01/ch01-02-hello-vscode.md)
+    -   [Other Tools](ch01/ch01-03-other-tools.md)
 
--   [Hello Programming]()
+-   [Hello Programming](./ch02/ch02-hello-programming.md)
 
-    -   [The Basics]()
-    -   [Variables]()
-    -   [Types]()
-    -   [Operations]()
-    -   [Expressions and Statements]()
-    -   [Conditionals]()
-    -   [Looping]()
-    -   [Function]()
-    -   [Method]()
-    -   [Extra Exercise]()
+    -   [The Basics](./ch02/ch02-01-the-basics.md)
+    -   [Variables](./ch02/ch02-02-variables.md)
+    -   [Types](./ch02/ch02-03-types.md)
+    -   [Operations](./ch02/ch02-04-operation.md)
+    -   [Expressions and Statements](./ch02/ch02-05-expressions-statments.md)
+    -   [Conditionals](./ch02/ch02-06-conditionals.md)
+    -   [Looping](./ch02/ch02-07-looping.md)
+    -   [Functions](./ch02/ch02-08-functions.md)
+    -   [Objects](./ch02/ch02-09-objects.md)
+    -   [Extra Exercises](./ch02/ch02-10-extra-exercises.md)
 
 -   [Hello ...Ruleset?]()
 
