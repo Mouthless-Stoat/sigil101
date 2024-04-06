@@ -11,5 +11,5 @@ Oh no you found my todo
 -   [ ] Chapter 7: Defy death!
 -   [ ] Chapter 8: Cha cha real smooth
 -   [ ] Chapter 9: Custom UI
--   [ ] Chapter 10: Looking to the future
+-   [ ] Chapter 10: Looking into the future
 -   [ ] Chapter 11: We love casting spell
