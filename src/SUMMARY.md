@@ -2,13 +2,13 @@
 
 [Introduction](./intro.md)
 
-# Getting Started
+# Starting Up
 
--   [Getting Started](./chapter_1.md)
+-   [Getting Started](./ch01-getting-started.md)
 
-    -   [Hello Godot]()
-    -   [Hello Vscode]()
-    -   [Other Tools]()
+    -   [Hello Godot](ch01-01-hello-godot.md)
+    -   [Hello Vscode](ch01-02-hello-vscode.md)
+    -   [Other Tools](ch01-03-other-tools.md)
 
 -   [Hello Programming]()
 

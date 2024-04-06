@@ -2,7 +2,7 @@
 
 Oh no you found my todo
 
--   [ ] Chapter 1: Getting Started
+-   [x] Chapter 1: Getting Started
 -   [ ] Chapter 2: Hello Programming!
 -   [ ] Chapter 3: Hello ...Ruleset?
 -   [ ] Chapter 4: The First of Many
