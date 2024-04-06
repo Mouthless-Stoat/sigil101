@@ -18,5 +18,6 @@ additional-css = ["theme/css.css"]
 [output.html.code.hidelines]
 json= "~"
 
-[preprocessor.test]
-command = "python ./preprocessor/test.py"
+[preprocessor]
+snip = {command = "python ./preprocessor/snip.py"}
+inlineHl = {command = "./preprocessor/mdbook-inline-highlighting.exe", default-language = "gd"}
