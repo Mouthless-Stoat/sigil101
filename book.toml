@@ -13,7 +13,10 @@ extra-watch-dirs = ["./preprocessor/"]
 [output.html]
 default-theme = "ayu"
 preferred-dark-theme = "ayu"
-additional-css = ["theme/css.css"]
+additional-css = ["theme/css.css", "./theme/mdbook-admonish.css", "./theme/customAdmonish.css"]
+
+git-repository-url = "https://github.com/Mouthless-Stoat/sigil101"
+edit-url-template = "https://github.com/Mouthless-Stoat/sigil101/edit/main/{path}"
 
 [output.html.code.hidelines]
 json= "~"
@@ -21,3 +24,14 @@ json= "~"
 [preprocessor]
 snip = {command = "python ./preprocessor/snip.py"}
 inlineHl = {command = "./preprocessor/mdbook-inline-highlighting.exe", default-language = "gd"}
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+
+[[preprocessor.admonish.custom]]
+directive = "activity"
+color = "#ffb454"
+icon = "./asset/notepad-icon.svg"
+aliases = ["act"]
+title = "Activites"

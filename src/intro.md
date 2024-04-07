@@ -3,8 +3,8 @@
 This book/guide will cover the basics of how to make custom sigil for Inscryption Multiplayer Fangame (IMF). The guide will assume you have no experience with programming or have anything set up, we will walk-through setting up everything you might need to create sigil. We do however make a few basic assumptions:
 
 -   **You are playing on PC**. The only real way to create sigil is to use a computer. This doesn't mean using the web version on a computer, but you have to download the game file and run it locally.
--   **You are using a version of Window**. While most thing in this guide are not platform dependent when something does come up it usually was made with only Window in mind, this is simply because I have a Window machine and do most of my work there. All command are mainly run in `powershell` which should be already install with your Window machine, be sure to use `powershell` and not `cmd` or `Command Prompt`.
-    > We sometime run some command in the terminal (mostly `powershell`) these command will be in a code block with and start with `>`, if there no `>` that usually mean it is the output of the previous command.
+-   **You are using a version of Window**. While the bulk of this guide are not platform dependent but the bulk of [Chapter 1](./ch01/ch01-getting-started.md) and the main set up part was written for Window, this is simply because I have a Window machine and do most of my work there.
+    > We sometime run some command in the terminal (mostly `powershell`) these command will be in a code block with and start with `>`, if there no `>` that usually mean it is the output of the previous command. You can open the terminal by typing `powershell` into your search bar
 -   **You have played IMF before**. We will do certain thing in-game and I won't necessarily explain in much detail how to do them, here are a few examples if you can pass most or all of these you should be good to go:
     -   Make a deck in game.
     -   Open Test mode with a deck.

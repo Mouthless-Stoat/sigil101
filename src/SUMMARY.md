@@ -4,13 +4,13 @@
 
 # Starting Up
 
--   [Getting Started](./ch01/ch01-getting-started.md)
+-   [Getting Started](./ch01/ch01-00-getting-started.md)
 
     -   [Hello Godot](ch01/ch01-01-hello-godot.md)
     -   [Hello Vscode](ch01/ch01-02-hello-vscode.md)
     -   [Other Tools](ch01/ch01-03-other-tools.md)
 
--   [Hello Programming](./ch02/ch02-hello-programming.md)
+-   [Hello Programming](./ch02/ch02-00-hello-programming.md)
 
     -   [The Basics](./ch02/ch02-01-the-basics.md)
     -   [Variables](./ch02/ch02-02-variables.md)
