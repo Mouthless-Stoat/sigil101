@@ -13,7 +13,7 @@ jobs:
           token: ${{secrets.GITHUB_TOKEN}}
           # Optional Plugins have to be enabled with a version
           use-admonish: true
-          admonish-version: "~3.0.2"
+          admonish-version: "~1.15.0"
       - name: Show mdbook version
         run: mdbook --version
       - name: Show admonish version
