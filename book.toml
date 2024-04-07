@@ -25,10 +25,10 @@ gd = "~"
 [preprocessor]
 main = {command = "python ./preprocessor/main.py"}
 inline-highlighting = {command = "./preprocessor/mdbook-inline-highlighting.exe", default-language = "gdscript"}
-admonish = {command = "./preprocessor/mdbook-admonish.exe"}
 
 
 [preprocessor.admonish]
+command = "./preprocessor/mdbook-admonish.exe"
 assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
 [[preprocessor.admonish.custom]]
