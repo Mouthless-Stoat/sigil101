@@ -4,22 +4,22 @@
 
 # Starting Up
 
--   [Getting Started](./ch01/ch01-00-getting-started.md)
+-   [Getting Started](./ch1/ch1-0-getting-started.md)
 
-    -   [Hello Godot](ch01/ch01-01-hello-godot.md)
-    -   [Hello Vscode](ch01/ch01-02-hello-vscode.md)
-    -   [Other Tools](ch01/ch01-03-other-tools.md)
+    -   [Hello Godot](ch1/ch1-1-hello-godot.md)
+    -   [Hello Vscode](ch1/ch1-2-hello-vscode.md)
+    -   [Other Tools](ch1/ch1-3-other-tools.md)
 
--   [Hello Programming](./ch02/ch02-00-hello-programming.md)
+-   [Hello Programming](./ch2/ch2-0-hello-programming.md)
 
-    -   [The Basics](./ch02/ch02-01-the-basics.md)
-    -   [Variables](./ch02/ch02-02-variables.md)
-    -   [Types](./ch02/ch02-03-types.md)
-    -   [Conditionals](./ch02/ch02-04-conditionals.md)
-    -   [Looping](./ch02/ch02-05-looping.md)
-    -   [Functions](./ch02/ch02-06-functions.md)
-    -   [Objects](./ch02/ch02-07-objects.md)
-    -   [Extra Exercises](./ch02/ch02-08-extra-exercises.md)
+    -   [The Basics](./ch2/ch2-1-the-basics.md)
+    -   [Variables](./ch2/ch2-2-variables.md)
+    -   [Types](./ch2/ch2-3-types.md)
+    -   [Conditionals](./ch2/ch2-4-conditionals.md)
+    -   [Looping](./ch2/ch2-5-looping.md)
+    -   [Functions](./ch2/ch2-6-functions.md)
+    -   [Objects](./ch2/ch2-7-objects.md)
+    -   [Extra Exercises](./ch2/ch2-8-extra-exercises.md)
 
 -   [Hello ...Ruleset?]()
 

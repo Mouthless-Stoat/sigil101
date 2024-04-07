@@ -19,7 +19,7 @@ Go to the `Extension` tab and search for `godot-tools` and download this extensi
 In vscode use the keybind `Ctrl-Shift-P` to open the `Command Palette` now type in the box `user setting` and you should select the option `Preferences: Open User Settings (JSON)`. This should open a new tab in vscode in that tab replace everything (it should already be empty) with the snippet below:
 
 ```json
-{{#include ./assets/setting.json}}
+{{#include ./listings/setting.json}}
 ```
 
 This will also turn on auto save for you along with setting up `Code Runner` to run Godot file later on.
