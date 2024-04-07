@@ -28,6 +28,7 @@ def snipProcess(content, path):
     for match in re.findall(r"@@snip\s([^:\n\s\t\r]+)(?::(.+))?", content):
         anchorName = match[1] if match[1] != "" else "main"
         p = Path(__file__).parent / f"../src/{path}" / ".." / match[0]
+        p.resolve()
         with p.open() as f:
             file = ""
             inAnchor = False
