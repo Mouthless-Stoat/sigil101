@@ -18,3 +18,16 @@ jobs:
         run: mdbook --version
       - name: Show admonish version
         run: mdbook-admonish --version
+      - name: build the book
+        run: mdbook build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.book'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        
