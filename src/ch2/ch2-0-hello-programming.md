@@ -16,5 +16,5 @@ Coding is a crucial part of making custom sigils because they rely on code to fu
 There are a few activities and exercises at the end of each chapter this will have a few simple project for you to do to recap what you learn.
 
 ```admonish act
-ACTIVITY
+This is what activities look like
 ```
