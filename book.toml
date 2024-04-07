@@ -28,7 +28,8 @@ inline-highlighting = {command = "./preprocessor/mdbook-inline-highlighting.exe"
 
 
 [preprocessor.admonish]
-command = "./preprocessor/mdbook-admonish.exe"
+command = "mdbook-admonish"
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
 [[preprocessor.admonish.custom]]
 directive = "activity"
