@@ -1,6 +1,0 @@
-{
-    "code-runner.executorMap": {
-        "gdscript": "godot --headless -s"
-    },
-    "files.autoSave": "afterDelay"
-}
