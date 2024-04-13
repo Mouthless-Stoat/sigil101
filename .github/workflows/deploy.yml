@@ -23,7 +23,7 @@ jobs:
       - name: Show admonish version
         run: mdbook-admonish --version
       - name: Show inline hl version
-        run: preprocessor/mdbook-inline-highlighting --version
+        run: .\preprocessor\mdbook-inline-highlighting --version
       - name: build the book
         run: mdbook build
       - name: Setup Pages
