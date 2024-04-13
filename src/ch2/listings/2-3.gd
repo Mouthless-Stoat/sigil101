@@ -2,7 +2,8 @@ extends SceneTree
 
 func _init():
     #START: main
-    var number = 69 # funni number
-    print(number)
+    var first = 19
+    var second = 84
+    print(first, second)
     #END: main
     quit()

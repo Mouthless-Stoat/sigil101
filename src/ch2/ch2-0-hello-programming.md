@@ -4,8 +4,8 @@
 
 Coding is a crucial part of making custom sigils because they rely on code to function. We will be coding in `gdscript` in this chapter and beyond. Normally we will run `gdscript` **within** Godot but this chapter will get you to code in `gdscript` **outside** of Godot. In this chapter we will talk about everything you need to know to be a programmer. Feel free to look up more info for part that you do not understand like on [Stack Overflow](https://stackoverflow.com) for getting answer (not so much for asking question), you can also ask in the [IMF Discord Server](https://discord.gg/wXS2FpJpCt). In this chapter, we will cover the following:
 
--   **Variable**: Variables are use to store value to be reuse later.
--   **Operator**: Operator allow computation to be done like math and comparison.
+-   **Variables**: Variables are use to store value to be reuse later.
+-   **Operators**: Operators allow computation to be done like math and comparison.
 -   **Types**: Types are different data type and we will see how they interact
 -   **Conditionals**: Conditional can help us run code based on if a condition is meet.
 -   **Looping**: Loop allow for repeating code without manually typing the same snippet over and over again.
