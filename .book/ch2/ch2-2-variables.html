@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Variables - A Guide to IMF Sigil</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="A full guide to making IMF sigil">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/extra.css">
+        <link rel="stylesheet" href="../theme/mdbook-admonish.css">
+        <link rel="stylesheet" href="../theme/customAdmonish.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Starting Up</li><li class="chapter-item expanded "><a href="../ch1/ch1-0-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/ch1-1-hello-godot.html"><strong aria-hidden="true">1.1.</strong> Hello Godot</a></li><li class="chapter-item expanded "><a href="../ch1/ch1-2-hello-vscode.html"><strong aria-hidden="true">1.2.</strong> Hello Vscode</a></li><li class="chapter-item expanded "><a href="../ch1/ch1-3-other-tools.html"><strong aria-hidden="true">1.3.</strong> Other Tools</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/ch2-0-hello-programming.html"><strong aria-hidden="true">2.</strong> Hello Programming</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/ch2-1-the-basics.html"><strong aria-hidden="true">2.1.</strong> The Basics</a></li><li class="chapter-item expanded "><a href="../ch2/ch2-2-variables.html" class="active"><strong aria-hidden="true">2.2.</strong> Variables</a></li><li class="chapter-item expanded "><a href="../ch2/ch2-3-types.html"><strong aria-hidden="true">2.3.</strong> Types</a></li><li class="chapter-item expanded "><a href="../ch2/ch2-4-conditionals.html"><strong aria-hidden="true">2.4.</strong> Conditionals</a></li><li class="chapter-item expanded "><a href="../ch2/ch2-5-looping.html"><strong aria-hidden="true">2.5.</strong> Looping</a></li><li class="chapter-item expanded "><a href="../ch2/ch2-6-functions.html"><strong aria-hidden="true">2.6.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../ch2/ch2-7-objects.html"><strong aria-hidden="true">2.7.</strong> Objects</a></li><li class="chapter-item expanded "><a href="../ch2/ch2-8-extra-exercises.html"><strong aria-hidden="true">2.8.</strong> Extra Exercises</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Hello ...Ruleset?</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> Basic of Json</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Types</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Your first ruleset</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> The First of Many</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Your first sigil</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Making it fun</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.</strong> Sharing is caring</div></li></ol></li><li class="chapter-item expanded "><li class="part-title">Diving Deeper</li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Understanding the API</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Defuse the Bombs</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Defy Death!</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Cha cha real smooth</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Custom UI</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Looking into the future</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> We love casting spell</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">A Guide to IMF Sigil</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/Mouthless-Stoat/sigil101" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/Mouthless-Stoat/sigil101/edit/main/src/ch2/ch2-2-variables.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="variables"><a class="header" href="#variables">Variables</a></h1>
+<blockquote>
+<p>We assume from now on that you know to put code in the ceremony to get it to run.</p>
+</blockquote>
+<p>One of the first concept we will talk about is variables, what they are and how to use them. Variable are container that we can use to store a piece of data or value to be use later. Let take a look at defining a variable</p>
+<pre><code class="language-gd">var x = 10
+</code></pre>
+<p>This will make a new variable call <code class="hljs language-gdscript">x</code> and it will contain the value (or number) <code class="hljs language-gdscript">10</code>. Variables can have different data type store in them, <code class="hljs language-gdscript">x</code> in this case is storing a number and the number value is <code class="hljs language-gdscript">10</code>. The type of the variable are important because it allow or more importantly disallow for certain type of operation. Let define a few more variable:</p>
+<pre><code class="language-gd">var number = 5       # new number variable
+var string = "Hello" # new string variable
+</code></pre>
+<blockquote>
+<p>You may have notice <code class="hljs language-text">#</code> follow by some text this is call a comment, we often use these to explain code. Anything after the <code class="hljs language-text">#</code> will be ignore by<code class="hljs language-text">gdscript</code>.</p>
+</blockquote>
+<p>To define a variable you first start with the word <code class="hljs language-gdscript">var</code>, <code class="hljs language-gdscript">var</code> is a keyword it tell<code class="hljs language-text">gdscript</code> how to read the next few words or characters. After saying <code class="hljs language-gdscript">var</code> we then get the variable name, in our 2 lines it is <code class="hljs language-gdscript">number</code> and <code class="hljs language-gdscript">string</code>. Next is the equal sign (<code class="hljs language-gdscript">=</code>) this mark the end of our variable name and tell<code class="hljs language-text">gdscript</code> whatever value after this will be put into our variable.</p>
+<blockquote>
+<p>Variable name must follow a few rules:</p>
+<ol>
+<li>Can't start with a number. Ex: <code class="hljs language-gdscript">1a</code> is not possible but <code class="hljs language-gdscript">a1</code> is.</li>
+<li>Can't contain special character except <code class="hljs language-gdscript">_</code>.</li>
+<li>Can't be a list of special name like <code class="hljs language-gdscript">name</code>, <code class="hljs language-gdscript">position</code> and a few others. You will rarely clash with these.</li>
+</ol>
+<p>There are many way to name variable, this book use a naming style known as <code class="hljs language-gdscript">snake_case</code>. It is where you use <code class="hljs language-gdscript">*</code> to separate between words in the variable name. There are other style like <code class="hljs language-gdscript">camelCase</code> with each new word change to have a capital letter and <code class="hljs language-gdscript">PascalCase</code> which is like <code class="hljs language-gdscript">camelCase</code> only the first word is also capitalized.</p>
+<p>Now is also a good time to mention that when coding your casing (capital or lowercase) matter. <code class="hljs language-gdscript">new_num</code>, <code class="hljs language-gdscript">NEW_num</code>, <code class="hljs language-gdscript">New_num</code>, <code class="hljs language-gdscript">new_Num</code>, you get the point, all of these are different variables.</p>
+</blockquote>
+<p>We first assign the value of <code class="hljs language-gdscript">5</code> to our <code class="hljs language-gdscript">number</code> variable and the value <code class="hljs language-gdscript">"Hello"</code> into our <code class="hljs language-gdscript">string</code> variable. Notice how <code class="hljs language-gdscript">"Hello"</code> is wrap in <code class="hljs language-gdscript">""</code> while <code class="hljs language-gdscript">5</code> is not, this is because <code class="hljs language-gdscript">"Hello"</code> is a string while <code class="hljs language-gdscript">5</code> is a number. A string is simply a literal piece of text that we put in our code and a number is well a number. Again we will talks in more details in <a href="./ch2-3-types.html">Chapter 2.3</a>. This is call <strong>variable declaration statement</strong>.</p>
+<p>Now only defining variables won't be very useful if we don't use them. To use a variable we simply just have to type it name, following the example above if we can just input <code class="hljs language-gdscript">number</code> to use the value store in the variables. We can use this variable instead of typing <code class="hljs language-gdscript">5</code> every time we use it.</p>
+<p>You may think typing out <code class="hljs language-gdscript">number</code> is more work than just typing <code class="hljs language-gdscript">5</code>, while this is correct if you change your mind later and want to change all <code class="hljs language-gdscript">5</code> into <code class="hljs language-gdscript">10</code> for example you need to go through your code and change every <code class="hljs language-gdscript">5</code> into a <code class="hljs language-gdscript">10</code>. But with variable we only need to change your declaration statement from <code class="hljs language-gdscript">var number = 5</code> to <code class="hljs language-gdscript">var number = 10</code> to change everything.</p>
+<p>Providing a variable also give us context. If you just see a <code class="hljs language-gdscript">5</code> in a piece of code you may not understand what it is for. But if we have a variable <code class="hljs language-gdscript">wait_time</code> we can assume that it is the wait time we are using. Variable is like giving name to value so we can better read code.</p>
+<p>Because of this you can declare some variable in term of other. Like this example, we give the variable <code class="hljs language-gdscript">new_number</code> the same value as <code class="hljs language-gdscript">number</code>:</p>
+<pre><code class="language-gd"><span class="boring">var number = 5
+</span>var new_number = number # have a value of 5
+</code></pre>
+<p>Let introduce a old friend we learn about in <a href="./ch2-1-the-basics.html">Chapter 2.1</a>, <code class="hljs language-gdscript">print()</code>. We can use <code class="hljs language-gdscript">print()</code> to output anything so we can see what going. Try the following</p>
+<pre><code class="language-gd"><span class="boring">extends SceneTree
+</span><span class="boring">
+</span><span class="boring">func _init():
+</span>    var number = 69 # funni number
+    print(number)
+<span class="boring">    quit()
+</span></code></pre>
+<p><span class="caption">Listing 2-2: Very nice number</span></p>
+<p>Run that code and in your terminal you should hopefully see <code class="hljs language-text">69</code>. As you can see you can print out variable by putting them in between parenthesis(<code class="hljs language-gdscript">()</code>). This is call a <strong>function call</strong>, functional call allow you to execute some piece of code in this case <code class="hljs language-gdscript">print()</code> will print to the output. We call what inside the parenthesis <strong>arguments</strong>, we are giving the function <code class="hljs language-gdscript">print</code> 1 argument and it is <code class="hljs language-gdscript">number</code>.</p>
+<p>Also try this:</p>
+<pre><code class="language-gd"><span class="boring">extends SceneTree
+</span><span class="boring">
+</span><span class="boring">func _init():
+</span>    var first = 19
+    var second = 84
+    print(first, second)
+<span class="boring">    quit()
+</span></code></pre>
+<p><span class="caption">Listing 2-3: Always watching</span></p>
+<p>Try to run the code and you should see <code class="hljs language-text">1984</code> printed. The function <code class="hljs language-gdscript">print</code> can take any amount of arguments, in this case we are giving it <code class="hljs language-gdscript">first</code> and <code class="hljs language-gdscript">second</code> as arguments. We separate between our argument with commas (<code class="hljs language-gdscript">,</code>). Note that <code class="hljs language-gdscript">print</code> does not put a space between our value.</p>
+<p>Of course we can also use string in our input like we did in <a href="./ch2-1-the-basics.html">Chapter 2.1</a>:</p>
+<pre><code class="language-gd"><span class="boring">extends SceneTree
+</span><span class="boring">
+</span><span class="boring">func _init():
+</span>    var hello = "Hello"
+    var world = "World"
+    print(hello, " ", world)
+<span class="boring">    quit()
+</span></code></pre>
+<p><span class="caption">Listing 2-4: Should print <code class="hljs language-text">Hello World</code></span></p>
+<p>You can see we manually inserted a space in using <code class="hljs language-gdscript">" "</code> between our arguments. Now let learn how to compute value using our variables.</p>
+<h2 id="assignment"><a class="header" href="#assignment">Assignment</a></h2>
+<p>You can declare variable but it isn't that use full if we can't change then, it won't be call a variable if we don't vary them. To change a variable we can do this:</p>
+<pre><code class="language-gd"><span class="boring">var number = 5
+</span>number = 10 # number is 10 now
+</code></pre>
+<p>You can reassign a variable any amount of time and after you change it any time after that you use the variable the value will be replace with the most recent assignment value. Before you can assign a value to variables you need to declare the variables first. You can of course assign a value using itself</p>
+<pre><code class="language-gd"><span class="boring">var x = "Hello"
+</span>x = x
+</code></pre>
+<blockquote>
+<p>The example above seem to violate this because it have hidden lines.</p>
+</blockquote>
+<h2 id="operators"><a class="header" href="#operators">Operators</a></h2>
+<p>Operators are use to compute different values.<code class="hljs language-text">gdscript</code> support a few basic arithmetic operator:</p>
+<pre><code class="language-gd">a + b  # addition
+a - b  # subtraction
+a * b  # multiplication
+a / b  # division
+a % b  # modulo
+a ** b # exponent
+-a     # Negate
+</code></pre>
+<p>These are operator that you may have learn in school. The only notable thing is that we use a star (<code class="hljs language-">*</code>) to represent multiplication sign like <code class="hljs language-">×</code> and <code class="hljs language-">⋅</code> that you may use in math and we use a slash (<code class="hljs language-">/</code>) to do division instead of <code class="hljs language-">÷</code> or <code class="hljs language-">:</code>. They work how you would expect, <code class="hljs language-gdscript">print(1 + 3)</code> will output <code class="hljs language-">4</code>. You can also use them during variable assignment to compute a value before putting it in a variable.</p>
+<pre><code class="language-gd">var x = 10        # set x to 10
+var new_x = x + x # set new_x to x + x or 10 + 10 or 20
+</code></pre>
+<p>The addition operator (<code class="hljs language-gdscript">+</code>) also work with other type other than numbers. You can do addition between string as well to join them:</p>
+<pre><code class="language-gd">print("Hello" + " " + "World!") # print "Hello World!"
+</code></pre>
+<p>There are other interaction between types with operatitors that we will cover in <a href="./ch2-3-types.html">Chapter 2.3</a>. Along with some other operator that interact with other type.</p>
+<h2 id="augmented-assignment"><a class="header" href="#augmented-assignment">Augmented Assignment</a></h2>
+<p>Sometime you want to do some operation and also assign the output back to the variable. For example this is a common operation</p>
+<pre><code class="language-gd"><span class="boring">var x = 5
+</span>x = x + 5
+print(x) # 10
+</code></pre>
+<p>Because this is such a common operation <code class="hljs language-">gdscript</code> have special way to do this:</p>
+<pre><code class="language-gd"><span class="boring">var x = 5
+</span>x += 5
+print(x) # 10
+</code></pre>
+<p><span class="caption">Listing 2-5: Augmented Assignment</span></p>
+<p>You can do the operator follow by a equal sign to use this short hand.</p>
+<div id="admonition-activites" class="admonition admonish-activity">
+<div class="admonition-title">
+<p>Activites</p>
+<p><a class="admonition-anchor-link" href="#admonition-activites"></a></p>
+</div>
+<div>
+<p>It might be alot to remember so here a few example to help you practice them</p>
+<ol>
+<li>Change Listing 2-2 to make it print <code class="hljs language-">1000</code> instead.</li>
+<li>Change Listing 2-3 to contain 3 variables and print out <code class="hljs language-">123456</code>.</li>
+<li>Make a variable cotaining the number <code class="hljs language-gdscript">001</code> and try printing it and see the result.</li>
+<li>Change Listing 2-5 the augmented assignment example above to add <code class="hljs language-gdscript">5</code> to <code class="hljs language-gdscript">x</code> the multiply it by <code class="hljs language-gdscript">10</code></li>
+<li>Write a program that you can input into a variable as the side length and print out the volume of a cube.</li>
+</ol>
+</div>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch2/ch2-1-the-basics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../ch2/ch2-3-types.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch2/ch2-1-the-basics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../ch2/ch2-3-types.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
