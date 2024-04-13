@@ -5,27 +5,15 @@ on:
       - main
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: write  # To push a branch 
       pages: write  # To push to a GitHub Pages site
       id-token: write # To update the deployment status
     steps:
       - uses: actions/checkout@v4
-      - uses: jontze/action-mdbook@v3
-        with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          # Optional Plugins have to be enabled with a version
-          use-admonish: true
-          admonish-version: "~1.15.0"
-      - name: Show mdbook version
-        run: mdbook --version
-      - name: Show admonish version
-        run: mdbook-admonish --version
-      - name: Show inline hl version
-        run: ./preprocessor/mdbook-inline-highlighting --version
       - name: build the book
-        run: mdbook build
+        run: ./exe/mdbook build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
