@@ -1,11 +1,10 @@
-name: Deploy
+name: Setup mdBook wth plugins (version)
 on:
   push:
     branches:
       - main
-
 jobs:
-  deploy:
+  run:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # To push a branch 
@@ -13,8 +12,20 @@ jobs:
       id-token: write # To update the deployment status
     steps:
       - uses: actions/checkout@v4
+      - uses: jontze/action-mdbook@v3
         with:
-          fetch-depth: 0
+          token: ${{secrets.GITHUB_TOKEN}}
+          # Optional Plugins have to be enabled with a version
+          use-admonish: true
+          admonish-version: "~1.15.0"
+      - name: Show mdbook version
+        run: mdbook --version
+      - name: Show admonish version
+        run: mdbook-admonish --version
+      - name: Show inline hl version
+        run: ./preprocessor/mdbook-inline-highlighting --version
+      - name: build the book
+        run: mdbook build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -25,3 +36,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        
