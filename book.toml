@@ -8,10 +8,10 @@ description = "A full guide to making IMF sigil"
 
 [build]
 build-dir = ".book"
-extra-watch-dirs = ["./preprocessor/"]
+extra-watch-dirs = ["preprocessor/"]
 
 [output.html]
-additional-css = ["./theme/extra.css", "./theme/mdbook-admonish.css", "./theme/customAdmonish.css"]
+additional-css = ["theme/extra.css", "theme/mdbook-admonish.css", "theme/customAdmonish.css"]
 
 git-repository-url = "https://github.com/Mouthless-Stoat/sigil101"
 edit-url-template = "https://github.com/Mouthless-Stoat/sigil101/edit/main/{path}"
@@ -21,8 +21,8 @@ json= "~"
 gd = "~"
 
 [preprocessor]
-main = {command = "python ./preprocessor/main.py"}
-inline-highlighting = {command = "./preprocessor/mdbook-inline-highlighting.exe", default-language = "gdscript"}
+main = {command = "python preprocessor/main.py"}
+inline-highlighting = {command = "preprocessor/mdbook-inline-highlighting.exe", default-language = "gdscript"}
 
 
 [preprocessor.admonish]
