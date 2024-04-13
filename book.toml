@@ -22,7 +22,7 @@ gd = "~"
 
 [preprocessor]
 main = {command = "python preprocessor/main.py"}
-inline-highlighting = {command = "preprocessor/mdbook-inline-highlighting.exe", default-language = "gdscript"}
+inline-highlighting = {command = "mdbook-inline-highlighting", default-language = "gdscript"}
 
 
 [preprocessor.admonish]
