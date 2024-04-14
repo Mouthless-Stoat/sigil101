@@ -1,20 +1,19 @@
-name: Deploy
+name: Setup mdBook wth plugins (version)
 on:
   push:
     branches:
       - main
-
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  run:
+    runs-on: windows-latest
     permissions:
       contents: write  # To push a branch 
       pages: write  # To push to a GitHub Pages site
       id-token: write # To update the deployment status
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: build the book
+        run: ./exe/mdbook build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
@@ -25,3 +24,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        

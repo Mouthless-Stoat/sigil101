@@ -21,12 +21,12 @@ json= "~"
 gd = "~"
 
 [preprocessor]
-main = {command = "python preprocessor/main.py"}
-inline-highlighting = {command = "mdbook-inline-highlighting", default-language = "gdscript"}
+main = {command = "python ./preprocessor/main.py"}
+inline-highlighting = {command = "./exe/mdbook-inline-highlighting.exe", default-language = "gdscript"}
 
 
 [preprocessor.admonish]
-command = "mdbook-admonish"
+command = "./exe/mdbook-admonish.exe"
 assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
 
 [[preprocessor.admonish.custom]]
