@@ -15,9 +15,9 @@ var number = 5       # new number variable
 var string = "Hello" # new string variable
 ```
 
-> You may have notice `[text] #` follow by some text this is call a comment, we often use these to explain code. Anything after the `[text] #` will be ignore by`[text] gdscript`.
+> You may have notice `[] #` follow by some text this is call a comment, we often use these to explain code. Anything after the `[] #` will be ignore by`[] gdscript`.
 
-To define a variable you first start with the word `var`, `var` is a keyword it tell`[text] gdscript` how to read the next few words or characters. After saying `var` we then get the variable name, in our 2 lines it is `number` and `string`. Next is the equal sign (`=`) this mark the end of our variable name and tell`[text] gdscript` whatever value after this will be put into our variable.
+To define a variable you first start with the word `var`, `var` is a keyword it tell`[] gdscript` how to read the next few words or characters. After saying `var` we then get the variable name, in our 2 lines it is `number` and `string`. Next is the equal sign (`=`) this mark the end of our variable name and tell`[] gdscript` whatever value after this will be put into our variable.
 
 > Variable name must follow a few rules:
 >
@@ -29,7 +29,7 @@ To define a variable you first start with the word `var`, `var` is a keyword it 
 >
 > Now is also a good time to mention that when coding your casing (capital or lowercase) matter. `new_num`, `NEW_num`, `New_num`, `new_Num`, you get the point, all of these are different variables.
 
-We first assign the value of `5` to our `number` variable and the value `"Hello"` into our `string` variable. Notice how `"Hello"` is wrap in `""` while `5` is not, this is because `"Hello"` is a string while `5` is a number. A string is simply a literal piece of text that we put in our code and a number is well a number. Again we will talks in more details in [Chapter 2.3](./ch2-3-types.md). This is call **variable declaration statement**.
+We first assign the value of `5` to our `number` variable and the value `"Hello"` into our `string` variable. Notice how `"Hello"` is wrap in `""` while `5` is not, this is because `"Hello"` is a string while `5` is a number. A string is simply a literal piece of text that we put in our code and a number is well a number. Again we will talks in more details in [Chapter 2.3](./3-types.md). This is call **variable declaration statement**.
 
 Now only defining variables won't be very useful if we don't use them. To use a variable we simply just have to type it name, following the example above if we can just input `number` to use the value store in the variables. We can use this variable instead of typing `5` every time we use it.
 
@@ -44,35 +44,40 @@ Because of this you can declare some variable in term of other. Like this exampl
 var new_number = number # have a value of 5
 ```
 
-Let introduce a old friend we learn about in [Chapter 2.1](./ch2-1-the-basics.md), `print()`. We can use `print()` to output anything so we can see what going. Try the following
+Let introduce a old friend we learn about in [Chapter 2.1](./1-the-basics.md), `print()`. We can use `print()` to output anything so we can see what going. Try the following
 
 ```gd
-@@snip ./listings/2-2.gd
+var number = 69
+print(number)
 ```
 
 @c Listing 2-2: Very nice number
 
-Run that code and in your terminal you should hopefully see `[text] 69`. As you can see you can print out variable by putting them in between parenthesis(`()`). This is call a **function call**, functional call allow you to execute some piece of code in this case `print()` will print to the output. We call what inside the parenthesis **arguments**, we are giving the function `print` 1 argument and it is `number`.
+Run that code and in your terminal you should hopefully see `[] 69`. As you can see you can print out variable by putting them in between parenthesis(`()`). This is call a **function call**, functional call allow you to execute some piece of code in this case `print()` will print to the output. We call what inside the parenthesis **arguments**, we are giving the function `print` 1 argument and it is `number`.
 
 Also try this:
 
 ```gd
-@@snip ./listings/2-3.gd
+var first = 19
+var second = 84
+print(first, second)
 ```
 
 @c Listing 2-3: Always watching
 
-Try to run the code and you should see `[text] 1984` printed. The function `print` can take any amount of arguments, in this case we are giving it `first` and `second` as arguments. We separate between our argument with commas (`,`). Note that `print` does not put a space between our value.
+Try to run the code and you should see `[] 1984` printed. The function `print` can take any amount of arguments, in this case we are giving it `first` and `second` as arguments. We separate between our argument with commas (`,`). Note that `print` does not put a space between our value.
 
-Of course we can also use string in our input like we did in [Chapter 2.1](./ch2-1-the-basics.md):
+Of course we can also use string in our input like we did in [Chapter 2.1](./1-the-basics.md):
 
 ```gd
-@@snip ./listings/2-4.gd
+var hello = "Hello"
+var world = "World"
+print(hello, " ", world)
 ```
 
-@c Listing 2-4: Should print `[text] Hello World`
-
 You can see we manually inserted a space in using `" "` between our arguments. Now let learn how to compute value using our variables.
+
+> After you declare a variable, you can't declare them again. However you can assign them multiple time, which we'll look at now.
 
 ## Assignment
 
@@ -94,7 +99,7 @@ x = x
 
 ## Operators
 
-Operators are use to compute different values.`[text] gdscript` support a few basic arithmetic operator:
+Operators are use to compute different values.`[] gdscript` support a few basic arithmetic operator:
 
 ```gd
 a + b  # addition
@@ -103,10 +108,19 @@ a * b  # multiplication
 a / b  # division
 a % b  # modulo
 a ** b # exponent
--a     # Negate
+-a     # negate
 ```
 
-These are operator that you may have learn in school. The only notable thing is that we use a star (`[] *`) to represent multiplication sign like `[] ×` and `[] ⋅` that you may use in math and we use a slash (`[] /`) to do division instead of `[] ÷` or `[] :`. They work how you would expect, `print(1 + 3)` will output `[] 4`. You can also use them during variable assignment to compute a value before putting it in a variable.
+These are operator that you may have learn in school. The only notable thing is that we use a star (`[] *`) to represent multiplication sign like `[] ×` and `[] ⋅` that you may use in math and we use a slash (`[] /`) to do division instead of `[] ÷` or `[] :`. They work how you would expect, `print(1 + 3)` will output `[] 4`. Operator respect order of operation (BEDMAS, PEMDAS, etc.) and you can change the order by using parenthesis to regroup operation, and in the case of 2 operation on the same priority it will compute left to right:
+
+```gd
+print(2 + 3 * 5)     # 17
+print((2 + 3) * 5)   # 25
+print(9 / 3 / 3)     # 1
+print(9 / (3 / 3))   # 9
+```
+
+You can also use them during variable assignment to compute a value before putting it in a variable.
 
 ```gd
 var x = 10        # set x to 10
@@ -119,7 +133,7 @@ The addition operator (`+`) also work with other type other than numbers. You ca
 print("Hello" + " " + "World!") # print "Hello World!"
 ```
 
-There are other interaction between types with operatitors that we will cover in [Chapter 2.3](./ch2-3-types.md). Along with some other operator that interact with other type.
+There are other interaction between types with operators that we will cover in [Chapter 2.3](./3-types.md). Along with some other operator that interact with other type.
 
 ## Augmented Assignment
 
@@ -131,15 +145,15 @@ x = x + 5
 print(x) # 10
 ```
 
-Because this is such a common operation `[] gdscript` have special way to do this:
+Which will work fine if your variable name is short but when they starting to get long, the code will look a big messy. Consider this example `long_variable_name = long_variable_name * 5`, thus `[] gdscript` allow for this shorthand call augmented assignment:
 
 ```gd
-~var x = 5
-x += 5
-print(x) # 10
+~var long_variable_name = 5
+long_variable_name *= 5
+print(long_variable_name) # 10
 ```
 
-@c Listing 2-5: Augmented Assignment
+@c Listing 2-4: Augmented Assignment
 
 You can do the operator follow by a equal sign to use this short hand.
 
@@ -149,6 +163,6 @@ It might be alot to remember so here a few example to help you practice them
 1. Change Listing 2-2 to make it print `[] 1000` instead.
 2. Change Listing 2-3 to contain 3 variables and print out `[] 123456`.
 3. Make a variable cotaining the number `001` and try printing it and see the result.
-4. Change Listing 2-5 the augmented assignment example above to add `5` to `x` the multiply it by `10`
+4. Change Listing 2-4 the augmented assignment example above to add `5` to `x` the multiply it by `10`
 4. Write a program that you can input into a variable as the side length and print out the volume of a cube.
 ```

@@ -19,8 +19,8 @@ If you meet all these things you should be able to follow along with this book. 
 -   **Chapter 3** will talk about how to edit a ruleset and in general how to use create a ruleset, add cards and everything else you need to know to use `json` the language rulesets are written in.
 -   **Chapter 4** will be the first project chapter we will encounter. We will be creating our first ever sigil in this chapter using everything we learned in the previous chapters.
 -   **Chapter 5** will dig deeper into the sigil API and see what else we can also do with the sigil.
--   **Chapter 6, 7, 8** will all be more project chapters (except chapter 6 kinda). In chapter 6 we will try and recreate the `Detonator` sigil, chapter 7 will show you how to defy death and chapter 8 will teach your how to create some sigil movement.
--   **Chapter 9** will introduce you to custom UI for your sigil.
--   **Chapter 10 and 11** will use these custom UI to create some more custom sigils borrowing from magic keywords.
+-   **Chapter 6 and 7** will all be more project chapters (except chapter 6 kinda). In chapter 6 we will try and recreate the `Detonator` sigil, chapter 7 will teach your how to create some sigil movement.
+-   **Chapter 8** will introduce you to custom UI for your sigil.
+-   **Chapter 9 and 10** will use these custom UI to create some more custom sigils borrowing from magic keywords.
 
 By the end of this book your should be able to create almost every sigil you can think of and will also have about 6 custom sigil already made for you to use.

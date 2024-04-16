@@ -3,19 +3,19 @@
 Types define how value and data interact with each other, what they can and not do. All value have a types here some basic type that you may encounter:
 
 ```gd
-int        # Integer
-float      # Floating-point number
-bool       # Boolean
-Array      # List or Array
-String     # String
-Dictionary # Distionary or Hashmap
+int        # integer
+float      # floating-point number
+bool       # boolean
+Array      # list or Array
+String     # string
+Dictionary # distionary or Hashmap
 ```
 
 There are more type that you may encounter later but these are the basic one. There are a few custom type that was made for IMF, that we will talk about later in [Chapter 5]().
 
 > You may notice that some type start with a capital letter while other don't. Lowercase type (`int`, `float`, `bool`) are primitive, basically that mean they are the most basic type that `[] gdscript` support of which there are only the 3 mentioned. Any other type that start with a uppercase letter are more complex.
 >
-> This is also a good time to mention a the concept of a literal. A literal is some value you type up literally in your code like `1` or `"Hello"` these are a integer literal and a string literal respectively.
+> This is also a good time to mention the concept of a literal. A literal is some value you type up literally in your code like `1` or `"Hello"` these are a integer literal and a string literal respectively.
 
 ## The Integer Type
 
@@ -66,18 +66,18 @@ print(float(10) / 3) # float 3.333...
 
 ## The Boolean Type
 
-Boolean is a yes or no, on or off, `true` or `false`, so the only 2 boolean values are `true` and `false`. We will use them later in the next chapter, [Chapter 2.4](./ch2-4-conditionals.md). They don't really interact with other types. There about a few operators that interact with or produce `bool`:
+Boolean is a yes or no, on or off, `true` or `false`, so the only 2 boolean values are `true` and `false`. We will use them later in the next chapter, [Chapter 2.4](./4-conditionals.md). They don't really interact with other types. There about a few operators that interact with or produce `bool`:
 
 ```gd
 a and b
 a or b
 not a
-a == b # Equality
-a != b # Not equality
-a > b  # Greater than
-a >= b # Greater than or equal to
-a < b  # Less than
-a <= b # Less than or equal to
+a == b # equality
+a != b # not equality
+a > b  # greater than
+a >= b # greater than or equal to
+a < b  # less than
+a <= b # less than or equal to
 ```
 
 These function as comparison:
@@ -114,9 +114,9 @@ You can access element store in an array by **indexing** it. To index an array y
 
 ```gd
 ~var first_array = [1, 2, 3]
-print(first_array[0])   # 1
-print(first_array[1])   # 2
-print(first_array[2])   # 3
+print(first_array[0])    # 1
+print(first_array[1])    # 2
+print(first_array[2])    # 3
 
 print(first_array[-1])   # 3
 print(first_array[-3])   # 1
@@ -131,7 +131,7 @@ Array also support some operation you can join or concatenate 2 arrays end to en
 print([1, 2] + [3, 4]) # [1, 2, 3, 4]
 ```
 
-Array can also be involve in assignment to change the value at specific location:
+Array can also be involve in assignment to change the value at specific location, however you can't extend an array like this:
 
 ```gd
 ~var first_array = [1, 2, 3]
@@ -146,7 +146,7 @@ The `String` type represent any piece of text, you can create a string by enclos
 
 ```gd
 var hello = "Hello Worlds"
-var not_a_number = "1984" # This is not a number
+var not_a_number = "1984" # this is not a number
 var emoji = "🤓"
 ```
 
@@ -164,4 +164,59 @@ print(string)          # Test99String
 
 > Be careful with change string at an index, be sure you are replacing the character with another string or you will encounter unexpected result.
 
-## Finally Dictionary
+## The Dictionary Type
+
+`Dictionary` is a collection of key-value pairs group together. Think of it like a group of variable together under the same top level name. You create a new dictionary using braces (`[] {}`), separating key and value with a colon (`[] :`) and key-value with commas. Your keys and values can be of any type including `Array` and `Dictionary` but they are usually not recommend.
+
+```gd
+var dict_key = "var_key"
+var dict = {
+    "key1": "hello",
+    123: 45,
+    [1, 2, 3]: "array", # array key
+    dict_key: "hi" # the key here will be the string "var_key"
+}
+```
+
+To access a dictionary value you can use the syntax like array indexing with the key between the bracket. If key is a string you don't need to include bracket and only need to use a period (`.`), this is called **dot notation**:
+
+```gd
+~var dict_key = "var_key"
+~var dict = {
+~    "key1": "hello",
+~    123: 45,
+~    [1, 2, 3]: "array",
+~    dict_key: "hi"
+~}
+~
+print(dict["key1"])    # hello
+print(dict[123])       # 45
+print(dict[[1, 2, 3]]) # array
+
+print(dict["var_key"]) # hi
+print(dict[dict_key])  # hi
+print(dict.var_key)    # hi
+# dict.dict_key won't work however
+```
+
+You can also assign a value to a specific key like you do with array, but different from array you can create or insert a new key like this:
+
+```gd
+var dict = {"a": 1, "b": 2}
+
+print(dict) # {a:1, b:2}
+dict.a = 10 # change the value at the key a
+print(dict) # {a:10, b:2}
+dict.c = 3  # add a new key c with the value 3
+print(dict) # {a:10, b:2, c:3}
+```
+
+```admonish act
+1. What is the return type of the following operation:
+    - `1 * 7`
+    - `11 / 3`
+    - `1.000000 / 4`
+    - `10 * 1 / 10`
+    - `9.6 / 1 + 10`
+2. Make a new dictionary and insert 3 new key using assignment
+```

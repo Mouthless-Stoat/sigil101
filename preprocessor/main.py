@@ -81,7 +81,7 @@ def filenameProcess(content, path):
 
 
 # processor to generate caption for listing
-# format @c [text]
+# format @c []
 def captionProcess(content, path):
     for match in re.findall(r"@c\s(.+)", content):
         content = content.replace(

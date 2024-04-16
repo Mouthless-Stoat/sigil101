@@ -10,7 +10,7 @@ Let get started on coding up something, make a new folder on your desktop or whe
 
 @c Listing 2-1: Your first program
 
-> A box at the bottom may pop up and say `[text] Couldn't connect to the GDscript language server` but don't worry about it, it is not important for what we are doing.
+> A box at the bottom may pop up and say `[] Couldn't connect to the GDscript language server` but don't worry about it, it is not important for what we are doing.
 
 Now you can click the triangle run button on the top right or hit `Ctrl-Alt-N`, you may see a window quickly open but don't worry it just Godot popping up to run your code and close again. Now at bottom of your vscode window you should see something like this
 
@@ -24,7 +24,7 @@ Hello!
 
 > I will strip the first few line for output from now on for convenience.
 
-You can skip over the first 4 lines they are just information about Godot but at the bottom you can see `[text] Hello!` this is the code that we just written and ran! You written and run some piece of code welcome to the programming club!
+You can skip over the first 4 lines they are just information about Godot but at the bottom you can see `[] Hello!` this is the code that we just written and ran!
 
 ## Understanding the Example
 
@@ -36,7 +36,7 @@ Let's break down our example and see what each part is doing, let's take a look 
 @@snip ./listings/2-1.gd:first
 ```
 
-This tell Godot that we are extending a object or class, you won't know what this mean now but we will touch on them later in [Chapter 2.7](./ch02-07-objects.md). This is basically us telling Godot to `extends` the class `SceneTree`. We are extending the `SceneTree` because it is the first thing that Godot loaded. Next we can move on to the next snippet:
+This tell `gdscript` that we are extending a object or class, you won't know what this mean now but we will touch on them later in [Chapter 2.7](./ch02-07-objects.md). We are extending the `SceneTree` because it is the first thing that Godot loaded. Next we can move on to the next snippet:
 
 ```gd
 @@snip ./listings/2-1.gd:func
@@ -48,13 +48,13 @@ This define a new function call `_init`, you will learn about function in [Chapt
 @@snip ./listings/2-1.gd:body
 ```
 
-Take note that it is slightly indented in, this is to tell Godot that this code belong in the `_init` function we just made,`[text] gdscript` are very picky about these indentation, through out this book we will use 4 spaces indentation and any snippet of code you copy from this book will follow that. When you are typing code in Godot Engine however, you can indent by hitting the `[text] Tab` key this will insert a tab character instead of 4 spaces, be very careful and convert this book 4 spaces snippet to 1 tab or else your code will not run.
+Take note that it is slightly indented in, this is to tell Godot that this code belong in the body of the `_init` function we just made,`[] gdscript` are very picky about these indentation, through out this book we will use 4 spaces when indenting and any snippet of code you copy from this book will follow that. Godot When you are typing code in the Godot Engine however, you can indent by hitting the `[] Tab` key this will insert a tab character instead of 4 spaces, be very careful and convert this book 4 spaces snippet to 1 tab or else your code will not run.
 
-Anyway, in this function body, you have 2 lines `print("Hello!")` and `quit()`. The first line we call the function `print` to print the text `[text] Hello!` to the screen. See that `"Hello!"` is wrap within `""`, this mean that we want `Hello!` to be a string, we will talk more about string and other type in [Chapter 2.3](./ch2-3-types.md). Lastly we do another function call `quit()` this is to tell godot to stop running the code and close the program.
+Anyway, in this function body, you have 2 lines `print("Hello!")` and `quit()`. The first line we call the function `print` to print the text `[] Hello!` to the screen. See that `"Hello!"` is wrap within `""`, this mean that we want `Hello!` to be a string, we will talk more about string and other type in [Chapter 2.3](./3-types.md). Lastly we do another function call `quit()` this is to tell godot to stop running the code and close the program.
 
 ## Ceremony
 
-These lines here:
+These lines below:
 
 ```gd
 @@snip ./listings/2-1.gd:ceremony

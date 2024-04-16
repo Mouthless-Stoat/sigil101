@@ -22,4 +22,4 @@ In vscode use the keybind `[] Ctrl-Shift-P` to open the `[] Command Palette` now
 {{#include ./listings/setting.json}}
 ```
 
-This will also turn on auto save for you along with setting up `[] Code Runner` to run Godot file later on.
+This will also turn on auto save for you along with setting up `[] Code Runner` to run `[] gdscript` file later on.
