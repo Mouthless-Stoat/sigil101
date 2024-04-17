@@ -174,7 +174,7 @@ var dict = {
     "key1": "hello",
     123: 45,
     [1, 2, 3]: "array", # array key
-    dict_key: "hi" # the key here will be the string "var_key"
+    dict_key: "hi"      # the key here will be the string "var_key"
 }
 ```
 
