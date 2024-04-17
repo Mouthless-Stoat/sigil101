@@ -48,7 +48,9 @@ This define a new function call `_init`, you will learn about function in [Chapt
 @@snip ./listings/2-1.gd:body
 ```
 
-Take note that it is slightly indented in, this is to tell Godot that this code belong in the body of the `_init` function we just made,`[] gdscript` are very picky about these indentation, through out this book we will use 4 spaces when indenting and any snippet of code you copy from this book will follow that. Godot When you are typing code in the Godot Engine however, you can indent by hitting the `[] Tab` key this will insert a tab character instead of 4 spaces, be very careful and convert this book 4 spaces snippet to 1 tab or else your code will not run.
+Take note that it is slightly indented in, this is to tell Godot that this code belong in the body of the `_init` function we just made,`[] gdscript` are very picky about these indentation, through out this book we will use 4 spaces when indenting and any snippet of code you copy from this book will follow that. When you are coding in vscode, pressing the `[] Tab` key will insert 4 spaces automatically for you.
+
+When you are typing code in the Godot Engine however, you can indent by hitting the `[] Tab` key this will insert a tab character instead of 4 spaces, be careful when copying code in this book and make sure that you are not mixing 1 tab and 4 spaces indentation.
 
 Anyway, in this function body, you have 2 lines `print("Hello!")` and `quit()`. The first line we call the function `print` to print the text `[] Hello!` to the screen. See that `"Hello!"` is wrap within `""`, this mean that we want `Hello!` to be a string, we will talk more about string and other type in [Chapter 2.3](./3-types.md). Lastly we do another function call `quit()` this is to tell godot to stop running the code and close the program.
 

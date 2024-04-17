@@ -115,3 +115,7 @@ var a = 1 if flag1 else 1.5
 var b = 2 if flag2 else 2.5
 var c = 3 if flag2 else 3.5
 ```
+
+```admonish act
+1. Write a program to check if a number is even or odd. You can see if a number is even or odd by checking the remainder of a division which is what the `%` operator do.
+```

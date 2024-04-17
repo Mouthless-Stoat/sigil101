@@ -3,14 +3,14 @@
 }
 
 :is(.admonition):is(.admonish-activity) {
-  border-color: #ffb454;
+  border-color: #3489eb;
 }
 
 :is(.admonish-activity) > :is(.admonition-title, summary.admonition-title) {
-  background-color: rgba(255, 180, 84, 0.1);
+  background-color: rgba(52, 137, 235, 0.1);
 }
 :is(.admonish-activity) > :is(.admonition-title, summary.admonition-title)::before {
-  background-color: #ffb454;
+  background-color: #3489eb;
   mask-image: var(--md-admonition-icon--admonish-activity);
   -webkit-mask-image: var(--md-admonition-icon--admonish-activity);
   mask-repeat: no-repeat;
