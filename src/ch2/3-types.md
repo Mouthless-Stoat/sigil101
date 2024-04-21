@@ -66,7 +66,7 @@ print(float(10) / 3) # float 3.333...
 
 ## The Boolean Type
 
-Boolean is a yes or no, on or off, `true` or `false`, so the only 2 boolean values are `true` and `false`. We will use them later in the next chapter, [Chapter 2.4](./4-conditionals.md). They don't really interact with other types. There about a few operators that interact with or produce `bool`:
+Boolean is a yes or no, on or off, `true` or `false`, so the only 2 boolean values are `true` and `false`. We will use them later in the next chapter, [Chapter 2.4](./4-conditionals.md). They don't really interact with other types but there are a few operators that interact between or produce `bool`:
 
 ```gd
 a and b
@@ -171,7 +171,7 @@ print(string)          # Test99String
 ```gd
 var dict_key = "var_key"
 var dict = {
-    "key1": "hello",
+    "key_1": "hello",
     123: 45,
     [1, 2, 3]: "array", # array key
     dict_key: "hi"      # the key here will be the string "var_key"
@@ -183,13 +183,13 @@ To access a dictionary value you can use the syntax like array indexing with the
 ```gd
 ~var dict_key = "var_key"
 ~var dict = {
-~    "key1": "hello",
+~    "key_1": "hello",
 ~    123: 45,
 ~    [1, 2, 3]: "array",
 ~    dict_key: "hi"
 ~}
 ~
-print(dict["key1"])    # hello
+print(dict["key_1"])    # hello
 print(dict[123])       # 45
 print(dict[[1, 2, 3]]) # array
 

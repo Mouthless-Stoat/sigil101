@@ -90,30 +90,30 @@ else:
 This is however cumbersome if you are assigning multiple value based on different condition, consider this
 
 ```gd
-~var flag1 = true
-~var flag2 = false
-~var flag3 = true
+~var flag_1 = true
+~var flag_2 = false
+~var flag_3 = true
 ~
-if flag1: var a = 1
+if flag_1: var a = 1
 else: var a = 1.5
 
-if flag2: var b = 2
+if flag_2: var b = 2
 else: var b = 2.5
 
-if flag3: var c = 3
+if flag_3: var c = 3
 else: var c = 3.5
 ```
 
 Because of this `gdscript` have the expression ternary if which can be use to return different value based on a condition. The syntax for ternary if is as follow `true_val if condition else false_val`. So the code above can be rewritten to use ternary like so:
 
 ```gd
-~var flag1 = true
-~var flag2 = false
-~var flag3 = true
+~var flag_1 = true
+~var flag_2 = false
+~var flag_3 = true
 ~
-var a = 1 if flag1 else 1.5
-var b = 2 if flag2 else 2.5
-var c = 3 if flag2 else 3.5
+var a = 1 if flag_1 else 1.5
+var b = 2 if flag_2 else 2.5
+var c = 3 if flag_2 else 3.5
 ```
 
 ```admonish act

@@ -122,6 +122,6 @@ Because `range` generate an array you can use it in `for` loop to quickly set up
 1. Create a program that count every odd number from `1` to `100`.
 2. Generate a range of every 4th number from 1 to 100 but in decreasing order.
 3. Given this array `\[5, 6, 1, 2, 3, 2, 3, 4, 2, 4]` count how many even number is in there.
-4. Given this dictionary `{"a": 10, "b": 11, "c": 1, "d: 1", "e": 10}` count how many key have the same value and what they are.
+4. Given this dictionary `{"a": 10, "b": 11, "c": 1, "d": 1, "e": 10}` count how many key have the same value and what they are.
 5. Given this array `\[5, 3, 2, 1, 2, 3, 2, 1, 3, 4, 3, 2, 3, 2]` count how many duplicate exist and what is the list without duplicate.
 ```
