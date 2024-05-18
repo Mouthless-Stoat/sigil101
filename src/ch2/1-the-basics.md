@@ -62,7 +62,7 @@ These lines below:
 @@snip ./listings/2-1.gd:ceremony
 ```
 
-Are what we call "ceremony" this mean that we always have to type these lines in our program before writing any of our own codes. Our code always have to go into the body of the `_init` function and we always end with a `quit()` to close the program. This however is only the ceremony for doing programming outside of Godot, when we get to coding sigil we will use a different ceremony for it.
+Are what we call "ceremony" or "boilerplate" this mean that we always have to type these lines in our program before writing any of our own codes. Our code always have to go into the body of the `_init` function and we always end with a `quit()` to close the program. This however is only the ceremony for doing programming outside of Godot, when we get to coding sigil we will use a different ceremony for it.
 
 ```admonish act
 1. Try changing the code to make it print `[] Hello World!` instead of `[] Hello!`.
