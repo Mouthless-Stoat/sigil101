@@ -1,17 +1,12 @@
-#START: whole
-#START: first
-#START: ceremony
+#START: whole first ceremony
 extends SceneTree
 #END: first
 
 #START: func
 func _init():
-#END: ceremony
-#END: func
+#END: ceremony func
 #START: body
     print("Hello!")
 #START: ceremony
     quit()
-#END: ceremony
-#END: body
-#END: whole
+#END: ceremony body whole

@@ -62,8 +62,8 @@ In this case it will only print yes once then stop without running other `elif` 
 ```gd
 var num = 6
 
-if num > 5:
-    if num < 10:
+if num >= 5:
+    if num <= 10:
         print("The number is between 5 and 10")
 ```
 
@@ -72,8 +72,8 @@ While this piece of code work there is better way to write this logic that is us
 ```gd
 ~var num = 6
 ~
-if num > 5 and num < 10:
-    ~print("The number is between 6 and 10")
+if num >= 5 and num <= 10:
+    ~print("The number is between 5 and 10")
 ```
 
 # If expression

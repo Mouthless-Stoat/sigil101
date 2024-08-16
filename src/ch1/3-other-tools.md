@@ -1,5 +1,7 @@
 # Other Tools
 
+> This sub-chapter is optional and you can skip it if you wish.
+
 There are a few other tools you might want to use to help you with navigating the game code and trying to understand it:
 
 -   `[] ripgrep`: a tool use to look up text and snippet of code in large project.

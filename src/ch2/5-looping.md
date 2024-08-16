@@ -99,7 +99,13 @@ The code will print out all the key to the dictionary line after line, if you wa
 
 ### Using Range
 
-`range` is a function which will create a list of number for you. `range` can take up to 3 arguments, but what each argument mean depend on the amount. If you only give `range` 1 argument that will be chosen as the end point (non-inclusive) of the array. If you give `range` 2 arguments the first will be the starting point (inclusive) and the second will be the end point (non-inclusive). And with 3 arguments `range` will act like the 2 arguments case with the third being the step. Lot of word but it very easy to understand:
+`range` is a function which will create a list of number for you. `range` can take up to 3 arguments, but what each argument mean depend on the amount.<br>
+
+1. If you only give `range` 1 argument that will be chosen as the end point (non-inclusive) of the array.<br>
+2. If you give `range` 2 arguments the first will be the starting point (inclusive) and the second will be the end point (non-inclusive).
+3. If you give `range` 3 arguments `range` will act like the 2 arguments case with the third being the step.
+
+Lot of word but it very easy to understand:
 
 ```gd
 print(range(5))         # [0, 1, 2, 3, 4]

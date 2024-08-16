@@ -90,7 +90,13 @@ print(3 == 4) # false
 print(4 != 1) # true
 ```
 
-The operator `and`, `or` and `not` are logic operator and they deal with boolean. The `and` operator only return `true` if **both** input is `true` and `false` otherwise. The `or` operator return `true` if **either** input is `true` and `false` otherwise. Lastly, the `not` operator inverse the input. You can look up `Truth Table` to see a few more examples:
+The operator `and`, `or` and `not` are logic operator and they deal with boolean.
+
+-   The `and` operator only return `true` if **both** input is `true` and `false` otherwise.
+-   The `or` operator return `true` if **either** input is `true` and `false` otherwise.
+-   The `not` operator inverse the input.
+
+You can look up `Truth Table` to see a few more examples:
 
 ```gd
 print(true and false) # false
@@ -100,7 +106,7 @@ print(not false)      # true
 print(not true)       # false
 ```
 
-> It often customary to name boolean variable in a form of a yes or no question like `is_enable` or `is_friendly`.
+> It often customary to name boolean variable in a form of a yes or no question like `is_enabled` or `is_friendly`.
 
 ## The Array Type
 
@@ -153,7 +159,7 @@ var emoji = "🤓"
 String function similar to array they can be index, change at index, etc:
 
 ```gd
-~var string = "Test String"
+var string = "Test String"
 print(string[5])       # S
 
 print(string + " new") # Test String new
@@ -162,7 +168,7 @@ string[4] = "99"
 print(string)          # Test99String
 ```
 
-> Be careful with change string at an index, be sure you are replacing the character with another string or you will encounter unexpected result.
+> Be careful when changing string at an index, be sure you are replacing the character with another string or you will encounter unexpected result.
 
 ## The Dictionary Type
 

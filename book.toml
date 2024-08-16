@@ -11,27 +11,31 @@ build-dir = ".book"
 extra-watch-dirs = ["preprocessor/"]
 
 [output.html]
-additional-css = ["./theme/extra.css", "./theme/mdbook-admonish.css", "./theme/customAdmonish.css"]
+additional-css = [
+  "./theme/extra.css",
+  "./theme/mdbook-admonish.css",
+  "./theme/customAdmonish.css",
+]
 
 git-repository-url = "https://github.com/Mouthless-Stoat/sigil101"
 edit-url-template = "https://github.com/Mouthless-Stoat/sigil101/edit/main/{path}"
 
 [output.html.code.hidelines]
-json= "~"
+json = "~"
 gd = "~"
 
 [preprocessor]
-main = {command = "python ./preprocessor/main.py"}
-inline-highlighting = {command = "./exe/mdbook-inline-highlighting.exe", default-language = "gdscript"}
+main = { command = "python ./preprocessor/main.py" }
+inline-highlighting = { command = "./exe/mdbook-inline-highlighting.exe", default-language = "gdscript" }
 
 
 [preprocessor.admonish]
 command = "./exe/mdbook-admonish.exe"
-assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
+assets_version = "3.0.2"              # do not edit: managed by `mdbook-admonish install`
 
 [[preprocessor.admonish.custom]]
 directive = "activity"
 color = "#3489eb"
 icon = "./asset/notepad-icon.svg"
 aliases = ["act"]
-title = "Activites"
+title = "Try this"

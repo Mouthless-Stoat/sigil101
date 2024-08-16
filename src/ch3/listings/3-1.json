@@ -1,0 +1,139 @@
+// START: whole
+{
+    // START: name header
+    "ruleset": "Example Ruleset",
+    "portrait": "portraits/Stoat",
+    "description": "This is a example ruleset",
+    // END: name
+
+    // START: features
+    "hammers_per_turn": 1,
+    "num_candles": 2,
+    "allow_snuffing_candles": true,
+    // END: features
+
+    // START: cardopt
+    "ant_limit": 2,
+    "variable_attack_nerf": false,
+    "opt_actives": false,
+    // END: cardopt
+
+    // START: deck
+    "max_commons_main": 4,
+    "max_commons_side": 10,
+    "deck_size_min": 1,
+    // END: deck
+
+    // START: experimental
+    "enable_backrow": false,
+    // END: header experimental
+
+    // START: cards
+    // STARTNO: header name features card deck experiment
+    "cards": [
+        { "name": "Squirrel", "attack": 0, "health": 0 },
+        { "name": "Wolf", "blood_cost": 2, "attack": 3, "health": 2 },
+        {
+            "name": "Adder",
+            "blood_cost": 1,
+            "attack": 1,
+            "health": 1,
+            "sigils": ["Touch of Death"]
+        },
+        // END: cards
+        {
+            "name": "Emerald Mox",
+            "sigils": ["Green Mox"],
+            "attack": 0,
+            "health": 1,
+            "nosac": true,
+            "banned": true
+        },
+        {
+            "name": "Ruby Mox",
+            "sigils": ["Orange Mox"],
+            "attack": 0,
+            "health": 1,
+            "nosac": true,
+            "banned": true
+        },
+        {
+            "name": "Sapphire Mox",
+            "sigils": ["Blue Mox"],
+            "attack": 0,
+            "health": 1,
+            "nosac": true,
+            "banned": true
+        },
+        {
+            "name": "Empty Vessel",
+            "attack": 0,
+            "health": 3,
+            "energy_cost": 1,
+            "nosac": true,
+            "banned": true
+        },
+        {
+            "name": "Leaping Vessel",
+            "sigils": ["Mighty Leap"],
+            "attack": 0,
+            "health": 2,
+            "energy_cost": 2,
+            "nosac": true,
+            "banned": true
+        },
+        // START: cards
+        {
+            "name": "Sigil Test",
+            "attack": 3,
+            "health": 100,
+            "sigils": ["Test Sigils"]
+        }
+    ],
+    // ENDNO: header name features card deck experiment
+    // END: cards
+
+    // START: sides
+    // STARTNO: header name features card deck experiment cards
+    "side_decks": {
+        "10 Squirrels": {
+            "type": "single",
+            "card": "Squirrel",
+            "count": 10
+        },
+        "Mox Draft": {
+            "type": "draft",
+            "cards": ["Ruby Mox", "Emerald Mox", "Sapphire Mox"],
+            "count": 10
+        },
+        "Vessels": {
+            "type": "single_cat",
+            "cards": {
+                "10 Empty": {
+                    "card": "Empty Vessel",
+                    "count": 10
+                },
+                "10 Leaping": {
+                    "card": "Leaping Vessel",
+                    "count": 10
+                }
+            }
+        }
+    },
+    // ENDNO: header name features card deck experiment cards
+    // END: sides
+
+    // START: sigils
+    // STARTNO: header name features card deck experiment cards sides
+    "custom_sigils": {
+        "Chungus": {
+            "description": "Big",
+            "author": "107zxz",
+            "url": "https://raw.githubusercontent.com/107zxz/inscr-onln-scripts/main/Chungus.gd",
+            "icon_url": "https://raw.githubusercontent.com/107zxz/inscr-onln/main/gfx/sigils/Airborne.png"
+        }
+    }
+    // ENDNO: header name features card deck experiment cards sides
+    // END: sigils
+}
+// END: whole

@@ -7,13 +7,14 @@ func test():
     print("WOAH FUNCTION")
 ```
 
-The code above will define a new function call `test` and it will run the code `print("WOAH FUNCTION")` when call. It should be noted that you usually want to have function declaration **outside** of your ceremony:
+The code above will define a new function call `test` and it will run the code `print("WOAH FUNCTION")` when call. It should be noted that you usually want to have function declaration **outside** of your main function:
 
 ```gd
 extends SceneTree
 
 func _init():
     print("other")
+    quit()
 
 func stuff():
     print("This function do stuff")
@@ -34,11 +35,12 @@ func stuff():
 >
 > func _init():
 >     a()
+>     quit()
 >
 > func a(): print("Hello")
 > ```
->
-> Let look at another example, here a function that count to `10`:
+
+Let look at another example, here a function that count to `10`:
 
 ```gd
 func count():
@@ -53,6 +55,7 @@ extends SceneTree
 
 func _init():
     count()
+    quit()
 
 func count():
     for i in 5:
@@ -78,6 +81,7 @@ func _init():
     count()
     count()
     count()
+    quit()
 
 func count():
     for i in 5:
@@ -155,7 +159,7 @@ var a = add(2, 3) # a is set to 3
 print(a) # 3
 ```
 
-> Actions that affect values outside of the function (like modifing another variable or print) are call side effect of the function. A function that only have side effect and no return are call impure, void or dirty function.
+> Actions that affect values outside of the function (like modifing another variable or print) are call side effect of the function. A function that only have side effect and no return are call impure or void function.
 
 ## Optional Parameters
 
@@ -164,8 +168,6 @@ Optional parameter are parameter to function that is well optional. These option
 ```gd
 func better_print(content, title): print(title, ": ", content)
 ```
-
-> Remember if a body is only 1 line long you don't need a new line and indent
 
 We can use this function to print some debug messaage like this:
 

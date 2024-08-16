@@ -1,6 +1,6 @@
 # Variables
 
-> We assume from now on that you know to put code in the ceremony to get it to run.
+> We assume from now on that you know to put code in the `_init` function to get it to run.
 
 One of the first concept we will talk about is variables, what they are and how to use them. Variable are container that we can use to store a piece of data or value to be use later. Let take a look at defining a variable
 

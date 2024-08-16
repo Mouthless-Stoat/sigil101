@@ -39,25 +39,27 @@ def snipProcess(content, path):
             inAnchor = False
             inNoShow = False
             for line in f.read().strip().split("\n"):
-                if f"START: {anchorName}" in line:
+                if f"START:" in line and anchorName in line:
                     inAnchor = True
                     continue
-                elif f"END: {anchorName}" in line:
+                elif f"END:" in line and anchorName in line:
                     inAnchor = False
                     continue
-                elif f"STARTNO: {anchorName}" in line:
+
+                elif f"STARTNO:" in line and anchorName in line:
                     inNoShow = True
                     continue
-                elif f"ENDNO: {anchorName}" in line:
+                elif f"ENDNO:" in line and anchorName in line:
                     inNoShow = False
                     continue
 
-                if "START" in line or "END" in line:
-                    continue
-                if "STARTNO" in line or "ENDNO" in line:
-                    continue
-
-                if inNoShow:
+                if (
+                    "START" in line
+                    or "END" in line
+                    or "STARTNO" in line
+                    or "ENDNO" in line
+                    or inNoShow
+                ):
                     continue
 
                 file += f"{'' if inAnchor else '~'}{line}\n"
