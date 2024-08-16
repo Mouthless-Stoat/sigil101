@@ -1,6 +1,6 @@
 # The Basics
 
-Let get started on coding up something, make a new folder on your desktop or wherever it is easy for you to find. In there make a file call `main.gd` this is where you will start coding from. Then you can open up vscode and choose `Open Folder` and navigate to that folder. Now open your `main.gd` and put in this:
+Let get started on coding up something, make a new folder on your desktop or wherever it is easy for you to find. In there make a file call `[] main.gd` this is where you will start coding from. Then you can open up vscode and choose `[] Open Folder` and navigate to that folder. Now open your `[] main.gd` and put in this:
 
 @f main.gd
 
@@ -10,9 +10,9 @@ Let get started on coding up something, make a new folder on your desktop or whe
 
 @c Listing 2-1: Your first program
 
-> A box at the bottom may pop up and say `[] Couldn't connect to the GDscript language server` but don't worry about it, it is not important for what we are doing.
+> A box at the bottom may pop up and say `[] Couldn't connect to the GDscript language server` but don't worry about it, it is not important.
 
-Now you can click the triangle run button on the top right or hit `Ctrl-Alt-N`, you may see a window quickly open but don't worry it just Godot popping up to run your code and close again. Now at bottom of your vscode window you should see something like this
+Now you can click the triangle run button on the top right or hit `[] Ctrl-Alt-N`, you may see a window quickly open but don't worry it just Godot popping up to run your code and close again. Now at bottom of your vscode window you should see something like this
 
 ```text
 Godot Engine v3.5.3.stable.official.6c814135b - https://godotengine.org
@@ -36,23 +36,23 @@ Let's break down our example and see what each part is doing, let's take a look 
 @@snip ./listings/2-1.gd:first
 ```
 
-This tell `gdscript` that we are extending a object or class, you won't know what this mean now but we will touch on them later in [Chapter 2.7](./ch02-07-objects.md). We are extending the `SceneTree` because it is the first thing that Godot loaded. Next we can move on to the next snippet:
+This tell `gdscript` that we are extending an object or class, you might not know what this mean now but we will touch on them later in [Chapter 2.7](/7-objects.md). We are extending the `SceneTree` object because it is the first thing that Godot loaded. Next we can move on to the next snippet:
 
 ```gd
 @@snip ./listings/2-1.gd:func
 ```
 
-This define a new function call `_init`, you will learn about function in [Chapter 2.6](./ch02-06-functions.md). The short version is Godot will execute whatever code within this function when the file is run. Next we move into the body of this function:
+This define a new function call `_init`, you will learn about functions in [Chapter 2.6](./6-functions.md). The short version is Godot will execute whatever codes in this function when the file is run. Next we move into the body of this function:
 
 ```gd
 @@snip ./listings/2-1.gd:body
 ```
 
-Take note that it is slightly indented in, this is to tell Godot that this code belong in the body of the `_init` function we just made,`[] gdscript` are very picky about these indentation, through out this book we will use 4 spaces when indenting and any snippet of code you copy from this book will follow that. When you are coding in vscode, pressing the `[] Tab` key will insert 4 spaces automatically for you.
+Take note that it is slightly indented in, this is to tell Godot that this code belong in the body of the `_init` function we just made,`[] gdscript` is very picky about these indentation, through out this book we will use 4 spaces when indenting and any snippet of code you copy from this book will follow that. When you are coding in vscode, pressing the `[] Tab` key will insert 4 spaces automatically for you.
 
 When you are typing code in the Godot Engine however, you can indent by hitting the `[] Tab` key this will insert a tab character instead of 4 spaces, be careful when copying code in this book and make sure that you are not mixing 1 tab and 4 spaces indentation.
 
-Anyway, in this function body, you have 2 lines `print("Hello!")` and `quit()`. The first line we call the function `print` to print the text `[] Hello!` to the screen. See that `"Hello!"` is wrap within `""`, this mean that we want `Hello!` to be a string, we will talk more about string and other type in [Chapter 2.3](./3-types.md). Lastly we do another function call `quit()` this is to tell godot to stop running the code and close the program.
+Anyway, in this function body, you have 2 lines `print("Hello!")` and `quit()`. The first line we call the function `print` to print the text `[] Hello!` to the screen. See that `"Hello!"` is wrap within `""`, this mean that we want `Hello!` to be a string, we will talk more about string and other type in [Chapter 2.3](./3-types.md). Lastly we do another function call, `quit()` this is to tell Godot to stop running the code and close the program.
 
 ## Ceremony
 
@@ -66,5 +66,5 @@ Are what we call "ceremony" or "boilerplate" this mean that we always have to ty
 
 ```admonish act
 1. Try changing the code to make it print `[] Hello World!` instead of `[] Hello!`.
-2. Try removing the `quit()` line and see what happen, and why?
+2. Try removing the `quit()` line and see what happen.
 ```

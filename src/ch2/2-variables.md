@@ -2,13 +2,13 @@
 
 > We assume from now on that you know to put code in the `_init` function to get it to run.
 
-One of the first concept we will talk about is variables, what they are and how to use them. Variable are container that we can use to store a piece of data or value to be use later. Let take a look at defining a variable
+One of the first concept we will talk about is variables, what they are and how to use them. Variable are container that we can use to store a piece of data or value to be use later. Let take a look at defining a variable:
 
 ```gd
 var x = 10
 ```
 
-This will make a new variable call `x` and it will contain the value (or number) `10`. Variables can have different data type store in them, `x` in this case is storing a number and the number value is `10`. The type of the variable are important because it allow or more importantly disallow for certain type of operation. Let define a few more variable:
+This will make a new variable call `x` and it will contain the value `10`. Variables can have different data type store in them, `x` in this case is storing a number and the number is `10`. The type of the variable are important because it allow or more importantly disallow for certain type of operation. Let define a few more variable:
 
 ```gd
 var number = 5       # new number variable
@@ -17,19 +17,19 @@ var string = "Hello" # new string variable
 
 > You may have notice `[] #` follow by some text this is call a comment, we often use these to explain code. Anything after the `[] #` will be ignore by`[] gdscript`.
 
-To define a variable you first start with the word `var`, `var` is a keyword it tell`[] gdscript` how to read the next few words or characters. After saying `var` we then get the variable name, in our 2 lines it is `number` and `string`. Next is the equal sign (`=`) this mark the end of our variable name and tell`[] gdscript` whatever value after this will be put into our variable.
+To define a variable you first start with the word `var`, `var` is a keyword it tell `[] gdscript` how to read the next few words or characters. After saying `var` we then get the variable name, in our 2 lines it is `number` and `string`. Next is the equal sign (`=`) this mark the end of our variable name and tell `[] gdscript` whatever value after this will be put into our variable.
 
 > Variable name must follow a few rules:
 >
 > 1. Can't start with a number. Ex: `1a` is not possible but `a1` is.
 > 2. Can't contain special character except `_`.
-> 3. Can't be a list of special name like `name`, `position` and a few others. You will rarely clash with these.
+> 3. Can't be some special name like `name`, `position` and a few others. You will rarely clash with these.
 >
-> There are many way to name variable, this book use a naming style known as `snake_case`. It is where you use `*` to separate between words in the variable name. There are other style like `camelCase` with each new word change to have a capital letter and `PascalCase` which is like `camelCase` only the first word is also capitalized.
+> There are many way to name variable, this book use a naming style known as `snake_case`. It is where you use `_` to separate between words in the variable name. There are other style like `camelCase` with each new word change to have a capital letter and `PascalCase` which is like `camelCase` only that the first word is also capitalized.
 >
 > Now is also a good time to mention that when coding your casing (capital or lowercase) matter. `new_num`, `NEW_num`, `New_num`, `new_Num`, you get the point, all of these are different variables.
 
-We first assign the value of `5` to our `number` variable and the value `"Hello"` into our `string` variable. Notice how `"Hello"` is wrap in `""` while `5` is not, this is because `"Hello"` is a string while `5` is a number. A string is simply a literal piece of text that we put in our code and a number is well a number. Again we will talks in more details in [Chapter 2.3](./3-types.md). This is call **variable declaration statement**.
+We first assign the value of `5` to our `number` variable and the value `"Hello"` into our `string` variable. Notice how `"Hello"` is wrap in `""` while `5` is not, this is because `"Hello"` is a string while `5` is a number. A string is simply a literal piece of text that we put in our code and a number is well a number. Again we will talk in more details in [Chapter 2.3](./3-types.md). This is call **variable declaration statement**.
 
 Now only defining variables won't be very useful if we don't use them. To use a variable we simply just have to type it name, following the example above if we can just input `number` to use the value store in the variables. We can use this variable instead of typing `5` every time we use it.
 
@@ -44,7 +44,7 @@ Because of this you can declare some variable in term of other. Like this exampl
 var new_number = number # have a value of 5
 ```
 
-Let introduce a old friend we learn about in [Chapter 2.1](./1-the-basics.md), `print()`. We can use `print()` to output anything so we can see what going. Try the following
+Let introduce a function we learn about in [Chapter 2.1](./1-the-basics.md), `print()`. We can use `print()` to output anything so we can see what going. Try the following
 
 ```gd
 var number = 69
@@ -53,7 +53,7 @@ print(number)
 
 @c Listing 2-2: Very nice number
 
-Run that code and in your terminal you should hopefully see `[] 69`. As you can see you can print out variable by putting them in between parenthesis(`()`). This is call a **function call**, functional call allow you to execute some piece of code in this case `print()` will print to the output. We call what inside the parenthesis **arguments**, we are giving the function `print` 1 argument and it is `number`.
+Run that code and in your terminal you should hopefully see `[] 69`. As you can see, you can print out variable by putting them in between parenthesis (`()`). This is call a **function call**, functional call allow you to execute some piece of code in this case `print()` will print to the output. We call what inside the parenthesis **arguments**, we are giving the function `print` 1 argument and it is `number`.
 
 Also try this:
 
