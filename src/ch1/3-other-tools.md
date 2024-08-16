@@ -11,7 +11,7 @@ There are a few other tools you might want to use to help you with navigating th
 
 You can find and download `[] ripgrep` from their [GitHub repository](https://github.com/BurntSushi/ripgrep). `[] ripgrep` (`[] rg`) is a command-line tool meaning you need to run this in a command line or terminal, in our case it would mostly be `[] powershell` (`[] pwsh`). To install `[] rg` you can see the installation on their page, here is how to do it on Window.
 
-First open `[] pwsh` this can be done by typing `[] powershell` into your search box on your taskbar and hit `[] Enter`. Next in that window you can type:
+First open `[] pwsh` this can be done by typing `[] powershell` into the search box on your taskbar and hit `[] Enter`. Next in that window you can type:
 
 ```pwsh
 > winget install BurntSushi.ripgrep.MSVC

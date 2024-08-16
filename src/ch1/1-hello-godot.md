@@ -1,6 +1,6 @@
 # Hello Godot
 
-The first step to making sigils is to install Godot. The specific version of Godot that the game uses is [Godot 3.5.3](godotengine.org/download/3.x/) (keep this in mind when searching for solution).
+The first step to making sigils is to install **Godot**. The specific version of Godot that the game uses is [Godot 3.5.3](godotengine.org/download/3.x/) (keep this in mind when searching for solution).
 
 > There are way to make sigils without using Godot and the game code but this is way easier, but if you are interested however I may write one up as an Appendix.
 
@@ -8,7 +8,7 @@ Installing Godot is quite straightforward, just go to the page and hit download 
 
 ## Getting the Code
 
-The game is **open-source** (meaning the code is open for everyone to look at and download) you can find the game code [here](https://github.com/107zxz/inscr-onln). After going to that page click on `[] Code` then `[] Download ZIP` then you should have the game code downloaded.
+The game is **open-source** so you can find the game code [here](https://github.com/107zxz/inscr-onln). After going to that page click on `[] Code` then `[] Download ZIP` then you should have the game code downloaded.
 
 ![image](https://github.com/Mouthless-Stoat/sigil101/assets/89868169/52c58fb1-a5f0-4699-885d-cd01c927d93e)
 
@@ -18,7 +18,7 @@ After getting the game code, extract the `.zip` file. After you extract your fil
 
 ## Setting up PATH
 
-For [Chapter 2](../ch02/ch02-hello-programming.md) you need to run `[] gdscript` file outside of Godot, to do this we need to add Godot into your PATH so your computer can run these files. First find your Godot `.exe` file and rename it to `[] godot.exe`, then right click on the file and choose `[] Copy as Path`. Now in your search bar look up `[] enviroment path` and hit `[] Enter`. Now a window should pop up click on `[] Enviromental Variables` or hit `[] n` on your keyboard. A new window will open again, in this window look for `[] Path` in the top box and double click on it. A new window will open once again, in this window click `[] New` and paste in the path you copied earlier and hit `[] Enter`. Then click on `[] Ok` then `[] Ok` again and then `[] Ok` again one last time this should close all the windows.
+For [Chapter 2](../ch02/ch02-hello-programming.md) you need to run `[] gdscript` file **outside** of Godot, to do this we need to add Godot into your **PATH**. First go to the folder where you download Godot and rename `[] Godot_v3.5.3-stable_win64.exe` to `[] godot.exe`, then right click on the file and choose `[] Copy as Path`. Now in the Window search bar look up `[] enviroment path` and hit `[] Enter`. Now a window should pop up click on `[] Enviromental Variables`. A new window will open again, in this window look for `[] Path` in the top box and double click on it. A new window will open once again, in this window click `[] New` and paste in the path you copied earlier and hit `[] Enter`. Then click on `[] Ok` then `[] Ok` again and then `[] Ok` again one last time this should close all the windows.
 
 > To check if this actually work open `[] powershell` and type the following:
 >
@@ -26,13 +26,13 @@ For [Chapter 2](../ch02/ch02-hello-programming.md) you need to run `[] gdscript`
 > > godot --help
 > ```
 >
-> And if a lot of text that is not red pop up you should be good.
+> And if no red text appear you should be good.
 
 ## Navigation
 
-Godot UI might be daunting but we will talk about a few thing that you will need to follow along with this book. First on the left is your where it say `[] Scene` is your scene tree this will be important for custom UI but not now. Next below that is the `[] FileSystem` this is where all the game file is, you will be visiting this corner to add new file and icon to your sigil. On the right is your `[] Inspector` and `[] Node` tab these are again not important and are only useful later on during custom UI creation.
+Godot UI might be daunting but we will talk about a few thing that you will need to follow along with this book. First on the left where it say `[] Scene` is your scene tree this will be important for custom UI but not now. Next below that is the `[] FileSystem` this is where all the game file is, you will be visiting this corner to add new file and icon to your sigil. On the right is your `[] Inspector` and `[] Node` tab these are again not important and are only useful later on during custom UI creation.
 
-In the top middle of your window you should see about 4 tab `[] 2D`, `[] 3D`,`[] Script`,`[] AssetLib`. The `[] 2D` and `[] 3D` tab is once again not important until custom UI, what you need to remember is that `[] Script` tab this is where you will be editing your code. When you click on it Godot will open up a code editor, we will visit this later once we start building our sigil. The `[] AssetLib` is not important and it uses won;t be cover in this book.
+In the top middle of your window you should see 4 tabs: `[] 2D`, `[] 3D`, `[] Script` and `[] AssetLib`. The `[] 2D` and `[] 3D` tab is not important until custom UI, what important is the `[] Script` tab this is where you will be editing your code. When you click on it Godot will open up a code editor, we will visit this later once we start building our sigil. The `[] AssetLib` is not important at all so we won't cover it.
 
 A quick summary of what you need to know everything else can be safely ignore:
 
